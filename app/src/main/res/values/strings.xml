@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FoundMyPet</string>
+    <string name="login">Ingresar</string>
+    <string name="register">Registrarse</string>
+    <string name="email">Correo</string>
+    <string name="password">Contraseña</string>
+    <string name="confirm">Confirmar</string>
+    <string name="confirmPassword">Confirmar Contraseña</string>
+</resources>
