@@ -6,4 +6,12 @@
     <string name="password">Contraseña</string>
     <string name="confirm">Confirmar</string>
     <string name="confirmPassword">Confirmar Contraseña</string>
+    <string name="create_lostPet_post_tittle_hint">Titulo de la publicacion</string>
+    <string name="create_lostPet_post_name_label">Nombre:</string>
+    <string name="create_lostPet_post_race_label">Raza:</string>
+    <string name="create_lostPet_post_species_label">Especie:</string>
+    <string name="create_lostPet_post_color_label">Color:</string>
+    <string name="create_lostPet_post_lost_date_label">Fecha de desaparecido:</string>
+    <string name="create_lostPet_post_last_seen_label">Visto por ultima vez en:</string>
+    <string name="create_lostPet_post_contact_phone_label">Numero de contacto(s):</string>
 </resources>
