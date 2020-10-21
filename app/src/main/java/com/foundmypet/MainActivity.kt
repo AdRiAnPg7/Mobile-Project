@@ -20,5 +20,7 @@ class MainActivity : AppCompatActivity() {
         buttonRegister.setOnClickListener{
             startActivity(Intent(this,register::class.java))
         }
+
+
     }
 }
