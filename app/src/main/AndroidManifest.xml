@@ -15,7 +15,7 @@
 
         </activity>
         <activity android:name=".login" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".CreateLostPetPostActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
