@@ -6,6 +6,16 @@
     <string name="password">Contraseña</string>
     <string name="confirm">Confirmar</string>
     <string name="confirmPassword">Confirmar Contraseña</string>
+    <string name="user_profile_title">User Profile</string>
+    <string name="profile_name">Carla</string>
+    <string name="city_and_country">COCHABAMBA, BOLIVIA</string>
+    <string name="contact">Contacto</string>
+    <string name="cellphone">"Telefono: "</string>
+    <string name="cellphone_number">+591 70859812</string>
+    <string name="email_address">Carla_Almanza_Alcocer@gmail.com</string>
+    <string name="image_profile">Profile Image</string>
+    <string name="edit_profile">Edit Profile</string>
+
     <string name="create_lostPet_post_tittle_hint">Titulo de la publicacion</string>
     <string name="create_lostPet_post_name_label">Nombre:</string>
     <string name="create_lostPet_post_race_label">Raza:</string>
