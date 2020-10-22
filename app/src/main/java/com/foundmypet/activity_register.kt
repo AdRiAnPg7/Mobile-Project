@@ -3,36 +3,27 @@ package com.foundmypet
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.ktx.Firebase
-import kotlinx.android.synthetic.main.activity_login.*
 
-class activity_login : AppCompatActivity() {
+import kotlinx.android.synthetic.main.activity_register.*
+
+class activity_register : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_register)
 
-        val textGoToRegister = findViewById<TextView>(R.id.textRegister)
-
-        textGoToRegister.setOnClickListener{
-            startActivity(Intent(this,activity_register::class.java))
-        }
-        //setup
         setup()
     }
 
     private fun setup(){
         title = "Autentificacion"
 
-
-        buttonLogin.setOnClickListener {
-            if(textEmail.text.isNotEmpty() && textPassword.text.isNotEmpty()){
-                FirebaseAuth.getInstance()
-                    .signInWithEmailAndPassword(
-                    textEmail.text.toString(),
-                    textPassword.text.toString())
+        buttonConfirm.setOnClickListener {
+            if(textNewEmail.text.isNotEmpty() && textNewPassword.text.isNotEmpty()){
+                FirebaseAuth.getInstance().createUserWithEmailAndPassword(
+                    textNewEmail.text.toString(),
+                    textNewPassword.text.toString())
                     .addOnCompleteListener{
                         if (it.isSuccessful){
                             showHome(it.result?.user?.email?:"Este Email No existe :v", ProviderType.BASIC)
@@ -43,6 +34,7 @@ class activity_login : AppCompatActivity() {
                     }
             }
         }
+
     }
 
     private fun showAlert(){
@@ -61,5 +53,4 @@ class activity_login : AppCompatActivity() {
         }
         startActivity(homeIntent)
     }
-
 }

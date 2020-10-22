@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".register">
+    tools:context=".activity_register">
 
     <ImageView
         android:id="@+id/logo"
@@ -55,7 +55,7 @@
         android:autofillHints="" />
 
     <EditText
-        android:id="@+id/textPassword"
+        android:id="@+id/textNewPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -91,7 +91,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/textNewPassword"
         android:autofillHints="" />
 
     <CheckBox
@@ -102,7 +102,7 @@
         android:fontFamily="sans-serif-condensed"
         android:text="@string/acepto_los_terminos_y_condiciones"
         android:textColor="@color/Black"
-        app:layout_constraintStart_toStartOf="@+id/textPassword"
+        app:layout_constraintStart_toStartOf="@+id/textNewPassword"
         app:layout_constraintTop_toBottomOf="@+id/textPasswordConfirm" />
 
     <Button
