@@ -12,10 +12,10 @@
         <activity android:name=".UserProfileActivity"></activity>
         <activity android:name=".register" />
         <activity android:name=".ActivityMainPage">
-
         </activity>
-        <activity android:name=".login" />
-        <activity android:name=".CreateLostPetPostActivity">
+        <activity android:name=".activity_login" />
+        <activity android:name=".MainActivity"
+            android:theme="@style/SplashScreem">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
