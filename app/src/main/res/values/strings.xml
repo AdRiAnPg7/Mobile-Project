@@ -6,4 +6,9 @@
     <string name="password">Contraseña</string>
     <string name="confirm">Confirmar</string>
     <string name="confirmPassword">Confirmar Contraseña</string>
+    <string name="recuerdame">RECUERDAME</string>
+    <string name="no_tienes_cuenta">¿NO TIENES CUENTA?</string>
+    <string name="registrate">REGISTRATE</string>
+    <string name="todo">TODO</string>
+    <string name="acepto_los_terminos_y_condiciones">ACEPTO LOS TERMINOS Y CONDICIONES</string>
 </resources>
