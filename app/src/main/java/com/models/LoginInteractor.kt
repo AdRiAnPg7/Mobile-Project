@@ -6,17 +6,15 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 
-class login : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
-
-        val textGoToRegister = findViewById<TextView>(R.id.textRegister)
-
-        textGoToRegister.setOnClickListener{
-            startActivity(Intent(this,register::class.java))
+class LoginInteractor {
+    ...
+    fun login(username: String, password: String, listener: OnLoginFinishedListener) {
+        postDelayed(2000) {
+            when {
+                username.isEmpty() -> listener.onUsernameError()
+                password.isEmpty() -> listener.onPasswordError()
+                else -> listener.onSuccess()
+            }
         }
-
-
     }
 }
