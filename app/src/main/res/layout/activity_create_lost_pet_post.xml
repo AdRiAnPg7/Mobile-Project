@@ -8,12 +8,16 @@
 
     <ImageButton
         android:id="@+id/imageButton3"
-        android:layout_width="0dp"
-        android:layout_height="197dp"
+        android:layout_width="310dp"
+        android:layout_height="198dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline17"
         app:layout_constraintTop_toBottomOf="@+id/lostPet_newPost_tittle_input"
         app:srcCompat="@drawable/upload_icon" />
 
@@ -35,7 +39,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline17"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor" />
 
@@ -44,14 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="35dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="-257dp" />
+        app:layout_constraintGuide_percent="0.91727495" />
 
     <ImageButton
         android:id="@+id/imageButton4"
@@ -62,6 +59,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/checkbox_on_background" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="43dp" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="341dp"
         android:layout_height="269dp"
@@ -69,7 +73,7 @@
         app:cardBackgroundColor="@color/AliceBlue"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline17"
         app:layout_constraintTop_toBottomOf="@+id/imageButton3">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -104,9 +108,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:fontFamily="sans-serif-condensed"
+                android:labelFor="@id/create_lostPet_post_name_input"
                 android:text="@string/create_lostPet_post_name_label"
                 android:textColor="#000000"
-                android:labelFor="@id/create_lostPet_post_name_input"
                 app:layout_constraintStart_toStartOf="@+id/guideline11"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -116,9 +120,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-condensed"
+                android:labelFor="@id/create_lostPet_post_species_input"
                 android:text="@string/create_lostPet_post_species_label"
                 android:textColor="#000000"
-                android:labelFor="@id/create_lostPet_post_species_input"
                 app:layout_constraintStart_toStartOf="@+id/guideline11"
                 app:layout_constraintTop_toBottomOf="@+id/txtView_create_lostPetPost_name_label" />
 
@@ -128,9 +132,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-condensed"
+                android:labelFor="@id/create_lostPet_post_race_input"
                 android:text="@string/create_lostPet_post_race_label"
                 android:textColor="#000000"
-                android:labelFor="@id/create_lostPet_post_race_input"
                 app:layout_constraintStart_toStartOf="@+id/guideline11"
                 app:layout_constraintTop_toBottomOf="@+id/txtView_create_lostPetPost_species_label" />
 
@@ -140,9 +144,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-condensed"
+                android:labelFor="@id/create_lostPet_post_color_input"
                 android:text="@string/create_lostPet_post_color_label"
                 android:textColor="#000000"
-                android:labelFor="@id/create_lostPet_post_color_input"
                 app:layout_constraintStart_toStartOf="@+id/guideline11"
                 app:layout_constraintTop_toBottomOf="@+id/txtView_create_lostPetPost_race_label" />
 
@@ -152,9 +156,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-condensed"
+                android:labelFor="@id/create_lostPet_post_lastSeen_input"
                 android:text="@string/create_lostPet_post_last_seen_label"
                 android:textColor="#000000"
-                android:labelFor="@id/create_lostPet_post_lastSeen_input"
                 app:layout_constraintStart_toStartOf="@+id/guideline11"
                 app:layout_constraintTop_toBottomOf="@+id/txtView_create_lostPetPost_color_label" />
 
@@ -164,9 +168,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-condensed"
+                android:labelFor="@id/create_lostPet_post_phoneNumber_input"
                 android:text="@string/create_lostPet_post_contact_phone_label"
                 android:textColor="#000000"
-                android:labelFor="@id/create_lostPet_post_phoneNumber_input"
                 app:layout_constraintStart_toStartOf="@+id/guideline11"
                 app:layout_constraintTop_toBottomOf="@+id/txtView_create_lostPetPost_lastSeen_label" />
 
