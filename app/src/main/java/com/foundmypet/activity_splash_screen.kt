@@ -20,7 +20,6 @@ class activity_splash_screen : AppCompatActivity() {
     private fun goToMain(){
 
         Handler().postDelayed({
-
             val mIntent = Intent(this, MainActivity::class.java)
             startActivity(mIntent)
             finish()
