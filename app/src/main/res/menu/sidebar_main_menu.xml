@@ -4,29 +4,29 @@
     <item
         android:id="@+id/sidebar_menu_item"
         android:icon="@drawable/home_icon"
-        android:title="Item" />
+        android:title="@string/sidebar_menu_string" />
     <item
         android:id="@+id/sidebar_edit_post_item"
         android:icon="@drawable/edit_icon"
-        android:title="Item" />
+        android:title="@string/sidebar_edit_post_string" />
     <item
         android:id="@+id/sidebar_lost_pets_item"
         android:icon="@drawable/lost_pet"
-        android:title="Item" />
+        android:title="@string/sidebar_lost_pets_string" />
     <item
         android:id="@+id/sidebar_found_pets_item"
         android:icon="@drawable/found_icon"
-        android:title="Item" />
+        android:title="@string/sidebar_found_pets_string" />
     <item
-        android:id="@+id/sidebar_haapy_pets_items"
+        android:id="@+id/sidebar_happy_pets_items"
         android:icon="@drawable/happy_pets"
-        android:title="Item" />
+        android:title="@string/sidebar_happy_pets_string" />
     <item
         android:id="@+id/sidebar_configuration_item"
         android:icon="@drawable/setting_icon"
-        android:title="Item" />
+        android:title="@string/sidebar_configuration_string" />
     <item
-        android:id="@+id/sidebar_end_sesion_item"
+        android:id="@+id/sidebar_end_session_item"
         android:icon="@drawable/log_off"
-        android:title="Item" />
+        android:title="@string/sidebar_end_session_string" />
 </menu>
