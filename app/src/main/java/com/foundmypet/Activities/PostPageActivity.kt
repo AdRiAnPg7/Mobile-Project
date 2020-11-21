@@ -1,4 +1,4 @@
-package com.foundmypet.Activities
+package com.foundmypet
 
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity

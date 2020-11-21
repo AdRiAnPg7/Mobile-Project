@@ -54,4 +54,5 @@
     <string name="sidebar_happy_pets_string">Mascotas Felices</string>
     <string name="sidebar_configuration_string">Configuracion</string>
     <string name="sidebar_end_session_string">Cerrar Sesion</string>
+    <string name="email">Correo</string>
 </resources>

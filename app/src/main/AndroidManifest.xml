@@ -15,7 +15,7 @@
         <activity android:name=".activity_register" />
         <activity android:name=".activity_home_page" />
         <activity android:name=".activity_login" />
-        <activity android:name=".activity_splash_screen">
+        <activity android:name=".activity_splash_screen"/>
         <activity android:name=".ActivityMainPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
