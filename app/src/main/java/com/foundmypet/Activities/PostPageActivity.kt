@@ -1,4 +1,4 @@
-package com.foundmypet.Activities
+package com.foundmypet
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
