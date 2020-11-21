@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".Activities.PostPageImageActivity"></activity>
-        <activity android:name=".Activities.PostPageActivity" />
+        <activity android:name=".PostPageActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".activity_user_profile" />
         <activity android:name=".activity_register" />
