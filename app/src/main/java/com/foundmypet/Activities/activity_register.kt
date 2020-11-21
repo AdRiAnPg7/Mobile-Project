@@ -19,11 +19,11 @@ class activity_register : AppCompatActivity() {
     private fun setup(){
         title = "Autentificacion"
 
-        buttonConfirm.setOnClickListener {
-            if(textNewEmail.text.isNotEmpty() && textNewPassword.text.isNotEmpty()){
+        button_login_confirm.setOnClickListener {
+            if(text_new_email.text.isNotEmpty() && text_new_password.text.isNotEmpty()){
                 FirebaseAuth.getInstance().createUserWithEmailAndPassword(
-                    textNewEmail.text.toString(),
-                    textNewPassword.text.toString())
+                    text_new_email.text.toString(),
+                    text_new_password.text.toString())
                     .addOnCompleteListener{
                         if (it.isSuccessful){
                             showHome(it.result?.user?.email?:"Este Email No existe :v", ProviderType.BASIC)

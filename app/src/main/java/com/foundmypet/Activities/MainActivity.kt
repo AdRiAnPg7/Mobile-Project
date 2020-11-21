@@ -14,8 +14,8 @@ class MainActivity : AppCompatActivity() {
 
         setTheme(R.style.AppTheme)
 
-        val buttonLogin = findViewById<Button>(R.id.buttonGoToLogin)
-        val buttonRegister = findViewById<Button>(R.id.buttonGoToRegister)
+        val buttonLogin = findViewById<Button>(R.id.button_go_to_login)
+        val buttonRegister = findViewById<Button>(R.id.button_go_to_register)
 
         buttonLogin.setOnClickListener{
             startActivity(Intent(this,activity_login::class.java))
