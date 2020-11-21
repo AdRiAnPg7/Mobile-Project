@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">FoundMyPet</string>
+    <string name="login">Ingresar</string>
+    <string name="register">Registrarse</string>
+    <string name="title_email">Correo</string>
+    <string name="password">Contraseña</string>
+    <string name="confirm">Confirmar</string>
+    <string name="confirmPassword">Confirmar Contraseña</string>
+    <string name="title_user_profile">User Profile</string>
+    <string name="profile_name">Carla</string>
+    <string name="title_location">COCHABAMBA, BOLIVIA</string>
+    <string name="title_contact">Contacto</string>
+    <string name="title_cellphone">"Telefono: "</string>
+    <string name="title_cellphone_number">+591 70859812</string>
+    <string name="title_email_address">Carla_Almanza_Alcocer@gmail.com</string>
+    <string name="image_profile">Profile Image</string>
+    <string name="edit_profile">Edit Profile</string>
+
+    <string name="create_lostPet_post_tittle_hint">Titulo de la publicacion</string>
+    <string name="create_lostPet_post_name_label">Nombre:</string>
+    <string name="create_lostPet_post_race_label">Raza:</string>
+    <string name="create_lostPet_post_species_label">Especie:</string>
+    <string name="create_lostPet_post_color_label">Color:</string>
+    <string name="create_lostPet_post_lost_date_label">Fecha de desaparecido:</string>
+    <string name="create_lostPet_post_last_seen_label">Visto por ultima vez en:</string>
+    <string name="create_lostPet_post_contact_phone_label">Numero de contacto(s):</string>
+    <string name="recuerdame">RECUERDAME</string>
+    <string name="no_tienes_cuenta">¿NO TIENES CUENTA?</string>
+    <string name="registrate">REGISTRATE</string>
+    <string name="todo">TODO</string>
+    <string name="acepto_los_terminos_y_condiciones">ACEPTO LOS TERMINOS Y CONDICIONES</string>
+    <string name="sidebar_text_menu">Menu</string>
+    <string name="sidebar_menu_string">Inicio</string>
+    <string name="sidebar_edit_post_string">Editar Post</string>
+    <string name="sidebar_lost_pets_string">Mascotas Perdidas</string>
+    <string name="sidebar_found_pets_string">Mascotas Encontradas</string>
+    <string name="sidebar_happy_pets_string">Mascotas Felices</string>
+    <string name="sidebar_configuration_string">Configuracion</string>
+    <string name="sidebar_end_session_string">Cerrar Sesion</string>
+    <string name="email">Correo</string>
+</resources>
