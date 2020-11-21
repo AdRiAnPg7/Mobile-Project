@@ -22,7 +22,7 @@
         app:layout_constraintGuide_end="45dp" />
 
     <TextView
-        android:id="@+id/text_user_profile"
+        android:id="@+id/header_username_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_user_profile"
@@ -38,10 +38,10 @@
         android:layout_marginTop="40dp"
         android:text="@string/title_location"
         android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="@+id/text_user_profile"
+        app:layout_constraintEnd_toEndOf="@+id/header_username_text"
         app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintStart_toStartOf="@+id/text_user_profile"
-        app:layout_constraintTop_toBottomOf="@+id/text_user_profile" />
+        app:layout_constraintStart_toStartOf="@+id/header_username_text"
+        app:layout_constraintTop_toBottomOf="@+id/header_username_text" />
 
     <TextView
         android:id="@+id/text_title_contact"

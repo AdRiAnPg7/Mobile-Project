@@ -46,4 +46,13 @@
     <string name="title_number_contact_of_user_post_page">75822674 - 4434513</string>
     <string name="title_description_post_page">Description:</string>
     <string name="title_description_place_post_page">Salio de mi casa por la 6 de agosto...</string>
+    <string name="sidebar_text_menu">Menu</string>
+    <string name="sidebar_menu_string">Inicio</string>
+    <string name="sidebar_edit_post_string">Editar Post</string>
+    <string name="sidebar_lost_pets_string">Mascotas Perdidas</string>
+    <string name="sidebar_found_pets_string">Mascotas Encontradas</string>
+    <string name="sidebar_happy_pets_string">Mascotas Felices</string>
+    <string name="sidebar_configuration_string">Configuracion</string>
+    <string name="sidebar_end_session_string">Cerrar Sesion</string>
+
 </resources>

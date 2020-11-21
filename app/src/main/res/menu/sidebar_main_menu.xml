@@ -1,0 +1,32 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/sidebar_menu_item"
+        android:icon="@drawable/home_icon"
+        android:title="Item" />
+    <item
+        android:id="@+id/sidebar_edit_post_item"
+        android:icon="@drawable/edit_icon"
+        android:title="Item" />
+    <item
+        android:id="@+id/sidebar_lost_pets_item"
+        android:icon="@drawable/lost_pet"
+        android:title="Item" />
+    <item
+        android:id="@+id/sidebar_found_pets_item"
+        android:icon="@drawable/found_icon"
+        android:title="Item" />
+    <item
+        android:id="@+id/sidebar_haapy_pets_items"
+        android:icon="@drawable/happy_pets"
+        android:title="Item" />
+    <item
+        android:id="@+id/sidebar_configuration_item"
+        android:icon="@drawable/setting_icon"
+        android:title="Item" />
+    <item
+        android:id="@+id/sidebar_end_sesion_item"
+        android:icon="@drawable/log_off"
+        android:title="Item" />
+</menu>
