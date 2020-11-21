@@ -12,7 +12,7 @@ enum class ProviderType{
 class activity_home_page : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_page)
+        setContentView(R.layout.activity_home_page)
         setSupportActionBar(toolbar)
         setConfigDrawer()
 

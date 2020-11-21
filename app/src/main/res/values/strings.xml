@@ -29,4 +29,5 @@
     <string name="registrate">REGISTRATE</string>
     <string name="todo">TODO</string>
     <string name="acepto_los_terminos_y_condiciones">ACEPTO LOS TERMINOS Y CONDICIONES</string>
+    <string name="sidebar_text_menu">Menu</string>
 </resources>
