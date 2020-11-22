@@ -2,27 +2,37 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constrainLayout_1_create_lost_pet_post"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#004d69">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_left_lost_pet_post_layout_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="36dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_right_lost_pet_post_layout_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="36dp" />
+
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/image_btn_create_lost_pet_post"
         android:layout_width="310dp"
         android:layout_height="198dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline17"
-        app:layout_constraintTop_toBottomOf="@+id/lostPet_newPost_tittle_input"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_right_lost_pet_post_layout_1"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_left_lost_pet_post_layout_1"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_lost_pet_post_tittle"
         app:srcCompat="@drawable/upload_icon" />
 
     <EditText
-        android:id="@+id/lostPet_newPost_tittle_input"
+        android:id="@+id/text_input_lost_pet_post_tittle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
@@ -38,144 +48,134 @@
         android:textColorHint="@color/DarkGray"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintStart_toStartOf="@+id/guideline17"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_right_lost_pet_post_layout_1"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_left_lost_pet_post_layout_1"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.91727495" />
-
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/image_checkbox_create_lost_pet_post"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_right_lost_pet_post_layout_1"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/checkbox_on_background" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="43dp" />
-
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_create_lost_pet_post"
         android:layout_width="341dp"
         android:layout_height="269dp"
         android:layout_marginTop="32dp"
         app:cardBackgroundColor="@color/AliceBlue"
         app:cardCornerRadius="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintStart_toStartOf="@+id/guideline17"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3">
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_right_lost_pet_post_layout_1"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_left_lost_pet_post_layout_1"
+        app:layout_constraintTop_toBottomOf="@+id/image_btn_create_lost_pet_post">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrainLayout_2_create_lost_pet_post"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#FFFFFF">
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_end="27dp" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline11"
+                android:id="@+id/guide_line_left_lost_pet_post_layout_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintGuide_begin="32dp" />
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline9"
+                android:id="@+id/guide_line_right_lost_pet_post_layout_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="27dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_line_middle_lost_pet_post_layout_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintGuide_begin="87dp" />
 
             <TextView
-                android:id="@+id/txtView_create_lostPetPost_name_label"
+                android:id="@+id/text_label_create_lost_pet_post_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:fontFamily="sans-serif-condensed"
-                android:labelFor="@id/create_lostPet_post_name_input"
+                android:labelFor="@id/input_create_lost_pet_post_name"
                 android:text="@string/create_lostPet_post_name_label"
                 android:textColor="#000000"
-                app:layout_constraintStart_toStartOf="@+id/guideline11"
+                app:layout_constraintStart_toStartOf="@+id/guide_line_left_lost_pet_post_layout_2"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/txtView_create_lostPetPost_species_label"
+                android:id="@+id/text_label_create_lost_pet_post_species"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-condensed"
-                android:labelFor="@id/create_lostPet_post_species_input"
+                android:labelFor="@id/input_create_lost_pet_post_species"
                 android:text="@string/create_lostPet_post_species_label"
                 android:textColor="#000000"
-                app:layout_constraintStart_toStartOf="@+id/guideline11"
-                app:layout_constraintTop_toBottomOf="@+id/txtView_create_lostPetPost_name_label" />
+                app:layout_constraintStart_toStartOf="@+id/guide_line_left_lost_pet_post_layout_2"
+                app:layout_constraintTop_toBottomOf="@+id/text_label_create_lost_pet_post_name" />
 
             <TextView
-                android:id="@+id/txtView_create_lostPetPost_race_label"
+                android:id="@+id/text_label_create_lost_pet_post_race"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-condensed"
-                android:labelFor="@id/create_lostPet_post_race_input"
+                android:labelFor="@id/input_create_lost_pet_post_race"
                 android:text="@string/create_lostPet_post_race_label"
                 android:textColor="#000000"
-                app:layout_constraintStart_toStartOf="@+id/guideline11"
-                app:layout_constraintTop_toBottomOf="@+id/txtView_create_lostPetPost_species_label" />
+                app:layout_constraintStart_toStartOf="@+id/guide_line_left_lost_pet_post_layout_2"
+                app:layout_constraintTop_toBottomOf="@+id/text_label_create_lost_pet_post_species" />
 
             <TextView
-                android:id="@+id/txtView_create_lostPetPost_color_label"
+                android:id="@+id/text_label_create_lost_pet_post_color"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-condensed"
-                android:labelFor="@id/create_lostPet_post_color_input"
+                android:labelFor="@id/input_create_lost_pet_post_color"
                 android:text="@string/create_lostPet_post_color_label"
                 android:textColor="#000000"
-                app:layout_constraintStart_toStartOf="@+id/guideline11"
-                app:layout_constraintTop_toBottomOf="@+id/txtView_create_lostPetPost_race_label" />
+                app:layout_constraintStart_toStartOf="@+id/guide_line_left_lost_pet_post_layout_2"
+                app:layout_constraintTop_toBottomOf="@+id/text_label_create_lost_pet_post_race" />
 
             <TextView
-                android:id="@+id/txtView_create_lostPetPost_lastSeen_label"
+                android:id="@+id/text_label_create_lost_pet_post_lastSeen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-condensed"
-                android:labelFor="@id/create_lostPet_post_lastSeen_input"
+                android:labelFor="@id/input_create_lost_pet_post_lastSeen"
                 android:text="@string/create_lostPet_post_last_seen_label"
                 android:textColor="#000000"
-                app:layout_constraintStart_toStartOf="@+id/guideline11"
-                app:layout_constraintTop_toBottomOf="@+id/txtView_create_lostPetPost_color_label" />
+                app:layout_constraintStart_toStartOf="@+id/guide_line_left_lost_pet_post_layout_2"
+                app:layout_constraintTop_toBottomOf="@+id/text_label_create_lost_pet_post_color" />
 
             <TextView
-                android:id="@+id/txtView_create_lostPetPost_contactPhone_label"
+                android:id="@+id/text_create_lost_pet_post_contactPhone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-condensed"
-                android:labelFor="@id/create_lostPet_post_phoneNumber_input"
+                android:labelFor="@id/input_create_lost_pet_post_phoneNumber"
                 android:text="@string/create_lostPet_post_contact_phone_label"
                 android:textColor="#000000"
-                app:layout_constraintStart_toStartOf="@+id/guideline11"
-                app:layout_constraintTop_toBottomOf="@+id/txtView_create_lostPetPost_lastSeen_label" />
+                app:layout_constraintStart_toStartOf="@+id/guide_line_left_lost_pet_post_layout_2"
+                app:layout_constraintTop_toBottomOf="@+id/text_label_create_lost_pet_post_lastSeen" />
 
             <EditText
-                android:id="@+id/create_lostPet_post_name_input"
+                android:id="@+id/input_create_lost_pet_post_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/text_view_yellow_radius"
@@ -185,13 +185,13 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:textColor="#000000"
-                app:layout_constraintBaseline_toBaselineOf="@+id/txtView_create_lostPetPost_name_label"
-                app:layout_constraintEnd_toStartOf="@+id/guideline12"
-                app:layout_constraintStart_toStartOf="@+id/guideline9"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_label_create_lost_pet_post_name"
+                app:layout_constraintEnd_toStartOf="@+id/guide_line_right_lost_pet_post_layout_2"
+                app:layout_constraintStart_toStartOf="@+id/guide_line_middle_lost_pet_post_layout_2"
                 tools:ignore="LabelFor" />
 
             <EditText
-                android:id="@+id/create_lostPet_post_species_input"
+                android:id="@+id/input_create_lost_pet_post_species"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/text_view_yellow_radius"
@@ -201,13 +201,13 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:textColor="#000000"
-                app:layout_constraintBaseline_toBaselineOf="@+id/txtView_create_lostPetPost_species_label"
-                app:layout_constraintEnd_toStartOf="@+id/guideline12"
-                app:layout_constraintStart_toStartOf="@+id/guideline9"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_label_create_lost_pet_post_species"
+                app:layout_constraintEnd_toStartOf="@+id/guide_line_right_lost_pet_post_layout_2"
+                app:layout_constraintStart_toStartOf="@+id/guide_line_middle_lost_pet_post_layout_2"
                 tools:ignore="LabelFor" />
 
             <EditText
-                android:id="@+id/create_lostPet_post_race_input"
+                android:id="@+id/input_create_lost_pet_post_race"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/text_view_yellow_radius"
@@ -217,13 +217,13 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:textColor="#000000"
-                app:layout_constraintBaseline_toBaselineOf="@+id/txtView_create_lostPetPost_race_label"
-                app:layout_constraintEnd_toStartOf="@+id/guideline12"
-                app:layout_constraintStart_toStartOf="@+id/guideline9"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_label_create_lost_pet_post_race"
+                app:layout_constraintEnd_toStartOf="@+id/guide_line_right_lost_pet_post_layout_2"
+                app:layout_constraintStart_toStartOf="@+id/guide_line_middle_lost_pet_post_layout_2"
                 tools:ignore="LabelFor" />
 
             <EditText
-                android:id="@+id/create_lostPet_post_color_input"
+                android:id="@+id/input_create_lost_pet_post_color"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/text_view_yellow_radius"
@@ -233,13 +233,13 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:textColor="#000000"
-                app:layout_constraintBaseline_toBaselineOf="@+id/txtView_create_lostPetPost_color_label"
-                app:layout_constraintEnd_toStartOf="@+id/guideline12"
-                app:layout_constraintStart_toStartOf="@+id/guideline9"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_label_create_lost_pet_post_color"
+                app:layout_constraintEnd_toStartOf="@+id/guide_line_right_lost_pet_post_layout_2"
+                app:layout_constraintStart_toStartOf="@+id/guide_line_middle_lost_pet_post_layout_2"
                 tools:ignore="LabelFor" />
 
             <EditText
-                android:id="@+id/create_lostPet_post_lastSeen_input"
+                android:id="@+id/input_create_lost_pet_post_lastSeen"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -251,13 +251,13 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:textColor="#000000"
-                app:layout_constraintBaseline_toBaselineOf="@+id/txtView_create_lostPetPost_lastSeen_label"
-                app:layout_constraintEnd_toStartOf="@+id/guideline12"
-                app:layout_constraintStart_toEndOf="@+id/txtView_create_lostPetPost_lastSeen_label"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_label_create_lost_pet_post_lastSeen"
+                app:layout_constraintEnd_toStartOf="@+id/guide_line_right_lost_pet_post_layout_2"
+                app:layout_constraintStart_toEndOf="@+id/text_label_create_lost_pet_post_lastSeen"
                 tools:ignore="LabelFor" />
 
             <EditText
-                android:id="@+id/create_lostPet_post_phoneNumber_input"
+                android:id="@+id/input_create_lost_pet_post_phoneNumber"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -269,9 +269,9 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:textColor="#000000"
-                app:layout_constraintBaseline_toBaselineOf="@+id/txtView_create_lostPetPost_contactPhone_label"
-                app:layout_constraintEnd_toStartOf="@+id/guideline12"
-                app:layout_constraintStart_toEndOf="@+id/txtView_create_lostPetPost_contactPhone_label"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_create_lost_pet_post_contactPhone"
+                app:layout_constraintEnd_toStartOf="@+id/guide_line_right_lost_pet_post_layout_2"
+                app:layout_constraintStart_toEndOf="@+id/text_create_lost_pet_post_contactPhone"
                 tools:ignore="LabelFor" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
