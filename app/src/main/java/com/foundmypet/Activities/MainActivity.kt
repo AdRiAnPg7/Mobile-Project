@@ -18,11 +18,11 @@ class MainActivity : AppCompatActivity() {
         val buttonRegister = findViewById<Button>(R.id.button_go_to_register)
 
         buttonLogin.setOnClickListener{
-            startActivity(Intent(this,activity_login::class.java))
+            startActivity(Intent(this,LoginActivity::class.java))
         }
 
         buttonRegister.setOnClickListener{
-            startActivity(Intent(this,activity_register::class.java))
+            startActivity(Intent(this,RegisterActivity::class.java))
         }
 
 

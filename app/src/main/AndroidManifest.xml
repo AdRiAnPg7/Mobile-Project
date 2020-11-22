@@ -16,13 +16,13 @@
         <activity android:name=".SearcherActivity"></activity>
 
         <activity android:name=".MainActivity" />
-        <activity android:name=".activity_user_profile" />
-        <activity android:name=".activity_register" />
+        <activity android:name=".UserProfileActivity" />
+        <activity android:name=".RegisterActivity" />
         <activity android:name=".activity_home_page" />
-        <activity android:name=".activity_login" />
+        <activity android:name=".LoginActivity" />
 
-        <activity android:name=".activity_create_lost_pet" />
-        <activity android:name=".activity_splash_screen">
+        <activity android:name=".CreateLostPetPostActivity" />
+        <activity android:name=".SplashScreenActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

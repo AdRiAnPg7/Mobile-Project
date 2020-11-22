@@ -3,7 +3,7 @@ package com.foundmypet
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class activity_user_profile : AppCompatActivity() {
+class UserProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_profile)
