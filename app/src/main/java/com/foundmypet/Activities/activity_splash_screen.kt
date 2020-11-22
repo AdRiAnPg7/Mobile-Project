@@ -12,7 +12,7 @@ class activity_splash_screen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
         val animation = AnimationUtils.loadAnimation(baseContext, R.anim.animation_rotate)
-        imageLogoSplash.startAnimation(animation)
+        image_logo_splash.startAnimation(animation)
 
         goToMain()
 
