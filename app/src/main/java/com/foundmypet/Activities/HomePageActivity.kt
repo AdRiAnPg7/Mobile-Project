@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_home_page.*
 enum class ProviderType{
     BASIC
 }
-class activity_home_page : AppCompatActivity() {
+class HomePageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)

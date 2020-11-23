@@ -47,7 +47,7 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun showHome(email:String,provider:ProviderType){
-        val homeIntent = Intent(this, activity_home_page::class.java).apply {
+        val homeIntent = Intent(this, HomePageActivity::class.java).apply {
             putExtra("email", email)
             putExtra("provider", provider.name)
         }
