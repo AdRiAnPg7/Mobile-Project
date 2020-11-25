@@ -1,11 +1,15 @@
 package com.foundmypet
 
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
+import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_home_page.*
+
+
 enum class ProviderType{
     BASIC
 }
@@ -15,6 +19,15 @@ class HomePageActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home_page)
         setSupportActionBar(toolbar)
         setConfigDrawer()
+
+
+
+        //set icon
+        //supportActionBar?.setHomeButtonEnabled(false)
+        //supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        //supportActionBar?.setDisplayShowHomeEnabled(false)
+        //supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_search)
+
 
         val lista = arrayListOf<Post>()
         lista.add(
