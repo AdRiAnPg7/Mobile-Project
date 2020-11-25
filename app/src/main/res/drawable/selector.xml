@@ -5,5 +5,5 @@
         android:color="@drawable/custom_bottom_nav"/>
     <item
         android:state_selected="false"
-        android:color="@color/Black"/>
+        android:color="@color/Black" />
 </selector>
