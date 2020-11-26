@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.foundmypet.RoomDatabase.Entities.Post
 import kotlinx.android.synthetic.main.row_post.view.*
 
 class PostListAdapter(private var list: ArrayList<Post>, applicationContext: Context?): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -21,7 +22,7 @@ class PostListAdapter(private var list: ArrayList<Post>, applicationContext: Con
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val post = this.list[position]
-        holder.itemView.usernameTextView.text = post.postUserName
+        holder.itemView.usernameTextView.text = post.userName
         holder.itemView.descriptionTextView.text = post.postDescription
         holder.itemView.commentAntiquityTextView.text = post.postDate
     }

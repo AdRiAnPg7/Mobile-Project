@@ -7,7 +7,12 @@ import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.foundmypet.RoomDatabase.Database.AppRoomDatabase
+import com.foundmypet.RoomDatabase.Entities.Post
+import com.foundmypet.RoomDatabase.Repositories.PostRepository
 import kotlinx.android.synthetic.main.activity_home_page.*
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 
 enum class ProviderType{
@@ -28,72 +33,19 @@ class HomePageActivity : AppCompatActivity() {
         //supportActionBar?.setDisplayShowHomeEnabled(false)
         //supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_search)
 
+        GlobalScope.launch {
+            val postDao = AppRoomDatabase.getDatabase(applicationContext).postdato()
+            val repository = PostRepository(postDao)
+            //repository.insert(com.foundmypet.RoomDatabase.Entities.Post("the" , "Perdi mi perro aiuda", "url", "4 hr", "url", "Augusto"))
+            val listaPost = repository.getListBooks()
+            recylcerView.adapter = PostListAdapter(listaPost as ArrayList<Post>, applicationContext)
+            val linearLayoutManager = LinearLayoutManager(applicationContext)
+            linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
+            recylcerView.layoutManager = linearLayoutManager
+        }
 
-        val lista = arrayListOf<Post>()
-        lista.add(
-            Post(
-                "1",
-                "Busco a mi mascotita plox",
-                "un link generico",
-                "mi link de imagen",
-                "Alguien llamado x",
-                "5/5/2020"
-            )
-        )
-        lista.add(
-            Post(
-                "1",
-                "Busco a mi mascotita plox",
-                "un link generico",
-                "mi link de imagen",
-                "Alguien llamado x",
-                "5/5/2020"
-            )
-        )
-        lista.add(
-            Post(
-                "1",
-                "Busco a mi mascotita plox",
-                "un link generico",
-                "mi link de imagen",
-                "Alguien llamado x",
-                "5/5/2020"
-            )
-        )
-        lista.add(
-            Post(
-                "1",
-                "Busco a mi mascotita plox",
-                "un link generico",
-                "mi link de imagen",
-                "Alguien llamado x",
-                "5/5/2020"
-            )
-        )
-        lista.add(
-            Post(
-                "1",
-                "Busco a mi mascotita plox",
-                "un link generico",
-                "mi link de imagen",
-                "Alguien llamado x",
-                "5/5/2020"
-            )
-        )
-        lista.add(
-            Post(
-                "1",
-                "Busco a mi mascotita plox",
-                "un link generico",
-                "mi link de imagen",
-                "Alguien llamado x",
-                "5/5/2020"
-            )
-        )
-        recylcerView.adapter = PostListAdapter(lista, applicationContext)
-        val linearLayoutManager = LinearLayoutManager(applicationContext)
-        linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
-        recylcerView.layoutManager = linearLayoutManager
+
+
 
     }
 

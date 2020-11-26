@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "post_table")
 class Post(@ColumnInfo (name = "userID") var userID: String,
-           @ColumnInfo (name = "postComment") var postComment: String,
+           @ColumnInfo (name = "postDescription") var postDescription: String,
            @ColumnInfo (name = "postImageUrl") var postImageUrl: String,
            @ColumnInfo (name = "postDate") var postDate: String,
 
