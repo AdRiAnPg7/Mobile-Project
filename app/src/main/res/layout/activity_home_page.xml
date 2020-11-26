@@ -22,7 +22,9 @@
         android:outlineAmbientShadowColor="@color/White"
         android:outlineSpotShadowColor="@color/White"
         app:headerLayout="@layout/sidebar_header"
-        app:menu="@menu/sidebar_main_menu" />
+        app:menu="@menu/sidebar_main_menu"
+
+        />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -41,7 +43,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:title=" "
             tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="1dp">
+            tools:layout_editor_absoluteY="1dp"
+            >
 
 
             <ImageView
@@ -92,7 +95,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/botton_nav" />
+            app:menu="@menu/botton_nav"
+            android:layoutDirection="ltr"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
