@@ -11,19 +11,7 @@
     android:layoutDirection="rtl"
     tools:openDrawer="start">
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/drawer_navigation_view"
-        android:background="@color/White"
-        android:layout_width="wrap_content"
-        app:itemIconTint="@color/Black"
-        app:itemTextColor="@color/Black"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        android:outlineAmbientShadowColor="@color/White"
-        android:outlineSpotShadowColor="@color/White"
-        app:headerLayout="@layout/sidebar_header"
-        app:menu="@menu/sidebar_main_menu" />
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -87,4 +75,18 @@
             android:layoutDirection="ltr"
             tools:openDrawer="start"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/drawer_navigation_view"
+        android:background="@color/White"
+        android:layout_width="wrap_content"
+        app:itemIconTint="@color/Black"
+        app:itemTextColor="@color/Black"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:outlineAmbientShadowColor="@color/White"
+        android:outlineSpotShadowColor="@color/White"
+        app:headerLayout="@layout/sidebar_header"
+        app:menu="@menu/sidebar_main_menu" />
 </androidx.drawerlayout.widget.DrawerLayout>
