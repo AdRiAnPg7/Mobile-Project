@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_drawer_layout"
@@ -9,6 +10,71 @@
     tools:context=".HomePageActivity"
     android:layoutDirection="rtl"
     tools:openDrawer="start">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--TOOLBAR-->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toolbar_design"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title=" "
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp"
+             >
+
+            <ImageView
+                android:id="@+id/image_logo_text_toolbar"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo_name" />
+
+            <ImageView
+                android:id="@+id/image_logo_toolbar"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <!--CONTAINER FOR FRAGMENTS-->
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <!--BOTTOM NAVIGATION-->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/windowBackground"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="@drawable/selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/botton_nav"
+            android:layoutDirection="ltr"
+            tools:openDrawer="start"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/drawer_navigation_view"
@@ -23,76 +89,4 @@
         android:outlineSpotShadowColor="@color/White"
         app:headerLayout="@layout/sidebar_header"
         app:menu="@menu/sidebar_main_menu" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/toolbar_design"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            app:layout_constraintEnd_toEndOf="parent"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:title=" "
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="1dp">
-
-
-            <ImageView
-            android:id="@+id/image_logo_text_toolbar"
-            android:layout_width="200dp"
-            android:layout_height="45dp"
-            android:layout_gravity="end"
-            android:scaleType="centerInside"
-            android:src="@drawable/logo_name" />
-
-            <ImageView
-                android:id="@+id/image_logo_toolbar"
-                android:layout_width="70dp"
-                android:layout_height="45dp"
-                android:layout_gravity="end"
-
-                android:scaleType="centerInside"
-                android:src="@drawable/logo" />
-
-        </androidx.appcompat.widget.Toolbar>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recylcerView"
-            android:layout_width="0dp"
-            android:layout_height="680dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginLeft="1dp"
-            android:layout_marginEnd="1dp"
-            android:layout_marginRight="1dp"
-            android:layout_marginBottom="1dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar"
-            app:layout_constraintVertical_bias="0.0">
-
-        </androidx.recyclerview.widget.RecyclerView>
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:background="?android:attr/windowBackground"
-            app:itemIconTint="@drawable/selector"
-            app:itemTextColor="@drawable/selector"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/botton_nav" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
