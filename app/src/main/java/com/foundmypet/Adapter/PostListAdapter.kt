@@ -10,8 +10,8 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.row_post.view.*
 import kotlin.coroutines.coroutineContext
 
-class PostListAdapter(private val context: Context): RecyclerView.Adapter<PostListAdapter.PostListViewHolder>() {
-//    class PostListViewHolder(view: View): RecyclerView.ViewHolder(view)
+class PostListAdapter(private val context: Context?): RecyclerView.Adapter<PostListAdapter.PostListViewHolder>() {
+    //    class PostListViewHolder(view: View): RecyclerView.ViewHolder(view)
     private var dataList = mutableListOf<Post>()
 
     fun setListData(data:MutableList<Post>){

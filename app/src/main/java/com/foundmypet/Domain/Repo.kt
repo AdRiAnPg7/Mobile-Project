@@ -11,10 +11,12 @@ class Repo {
         val mutableData = MutableLiveData<MutableList<Post>>()
 
         FirebaseFirestore.getInstance().collection("Posts").get().addOnSuccessListener { result ->
-            val listData: MutableList<Post> = mutableListOf<Post>()
+            val listData = mutableListOf<Post>()
+            Log.d("IDPOST","Punto 1 getPostData")
+            Log.d("IDPOST",result.toString())
             for(document in result){
                 val postId = document.getString("postId")
-                Log.d("IDPOST",postId.toString())
+                Log.d("IDPOST","Punto 2 getPostData")
                 val postDescription = document.getString("postDescription")
                 val postImage = document.getString("postImage")
                 val postUserImage = document.getString("postUserImage")
@@ -23,6 +25,8 @@ class Repo {
                 val post = Post(postId!!,postDescription!!,postImage!!,postUserImage!!,postUserName!!,postDate!!)
                 listData.add(post)
             }
+            Log.d("IDPOST",result.toString() + "DESPUES RESULT")
+            Log.d("IDPOST","Punto 3 getPostData ")
             mutableData.value = listData
         }
         return mutableData
