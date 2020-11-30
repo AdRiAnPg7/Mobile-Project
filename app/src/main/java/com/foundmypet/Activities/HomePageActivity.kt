@@ -3,14 +3,12 @@ package com.foundmypet
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.foundmypet.Fragments.AddPostFragment
 import com.foundmypet.Fragments.HomeFragment
 import com.foundmypet.Fragments.SearchFragment
-import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_home_page.*
 
 
@@ -26,7 +24,6 @@ class HomePageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
 
-
         //TOOLBAR
         setSupportActionBar(toolbar)
         setConfigDrawer()
@@ -38,7 +35,6 @@ class HomePageActivity : AppCompatActivity() {
             }
             true
         }
-
 
         //BOTTOM NAVIGATION FRAGMENTS
         replaceFragment(homeFragment)
@@ -52,12 +48,8 @@ class HomePageActivity : AppCompatActivity() {
             true
         }
 
-        //set icon
-        //supportActionBar?.setHomeButtonEnabled(false)
-        //supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        //supportActionBar?.setDisplayShowHomeEnabled(false)
-        //supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_search)
     }
+
 
     // FUNTIONS FOR TOOLBAR
     private fun setConfigDrawer() {
@@ -80,5 +72,7 @@ class HomePageActivity : AppCompatActivity() {
 
 
 }
+
+
 
 

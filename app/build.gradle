@@ -56,6 +56,7 @@ dependencies {
     implementation kotlinLibs.values()
     implementation libs.values()
     implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.firebase:firebase-firestore-ktx:22.0.0'
     apply plugin: 'kotlin-kapt'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
@@ -73,12 +74,24 @@ dependencies {
     implementation "androidx.room:room-ktx:$rootProject.roomVersion"
     kapt "androidx.room:room-compiler:$rootProject.roomVersion"
     androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
-    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.archLifecycleVersion"
+//    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.archLifecycleVersion"
     kapt "androidx.lifecycle:lifecycle-compiler:$rootProject.archLifecycleVersion"
     androidTestImplementation "androidx.arch.core:core-testing:$rootProject.androidxArchVersion"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.archLifecycleVersion"
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutines"
     implementation "com.google.android.material:material:$rootProject.materialVersion"
     androidTestImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"
+
+
+    //Glide is a fast and efficient open source media management and image loading framework for Android
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    //A fast circular ImageView perfect for profile images
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //lifecycle
+    implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
+
 
 }
