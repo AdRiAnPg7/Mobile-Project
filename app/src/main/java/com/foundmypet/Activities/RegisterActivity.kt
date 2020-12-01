@@ -1,27 +1,42 @@
 package com.foundmypet
 
+import android.app.Activity
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
+import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.UserProfileChangeRequest
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_register.*
+import java.io.ByteArrayOutputStream
 
 
 class RegisterActivity : AppCompatActivity() {
 
-    // Vars Show Pass
-    private var isShowPass = false
-    private  var isShowPassConfirm = false
+    //Vars Auth
+    private var mAuth : FirebaseAuth? = null
 
+    // Vars User
+    private var imgUserPhoto : ImageView? = null
+    private var imageUri : Uri? = null
     // Vars Text Inputs
     private var textEmail: TextInputLayout? = null
     private var textUserName: TextInputLayout? = null
     private var textPass: TextInputLayout? = null
     private var textConfirmPass: TextInputLayout? = null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,9 +44,13 @@ class RegisterActivity : AppCompatActivity() {
 
         // Init Vars Text Inputs
         textEmail = findViewById<TextInputLayout>(R.id.text_container_email)
+        textUserName = findViewById<TextInputLayout>(R.id.text_container_user_name)
         textPass = findViewById<TextInputLayout>(R.id.text_container_new_password)
         textConfirmPass = findViewById<TextInputLayout>(R.id.text_container_new_confirm_password)
-        textUserName = findViewById<TextInputLayout>(R.id.text_container_user_name)
+        imgUserPhoto =findViewById<ImageView>(R.id.image_new_user_photo)
+
+        // Firebase
+        mAuth = FirebaseAuth.getInstance()
 
         // Setup
         setup()
@@ -40,20 +59,121 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun setup(){
         button_login_confirm.setOnClickListener {
-            if( validateEmail() && validatePassword() && validateUserName()){
-                FirebaseAuth.getInstance().createUserWithEmailAndPassword(
-                    text_new_email.text.toString(),
-                    text_new_password.text.toString())
-                    .addOnCompleteListener{
-                        if (it.isSuccessful){
-                            showHome(it.result?.user?.email?:"Este Email No existe", ProviderType.BASIC)
-                        }else{
-                            showAlert()
-                        }
+            register()
+        }
+        image_new_user_photo.setOnClickListener {
+            setImage()
+        }
+    }
 
+
+    private fun register(){
+
+        if( validateEmail() && validatePassword() && validateUserName()){
+            mAuth?.createUserWithEmailAndPassword(
+                text_new_email.text.toString(),
+                text_new_password.text.toString())
+                ?.addOnCompleteListener(this){ task ->
+                    if (task.isSuccessful){
+                        updateUserInfo(textUserName, imageUri, mAuth!!.currentUser)
+                        showHome(task.result?.user?.email?:"Este Email No existe", ProviderType.BASIC)
+                    }else{
+                        showAlert()
                     }
+                }
+        }
+
+    }
+
+
+    private fun updateUserInfo(textUserName: TextInputLayout?, imageUri: Uri?, currentUser: FirebaseUser?) {
+//        var mStorage:StorageReference? = FirebaseStorage.getInstance().reference.child("user_photos")
+//        var imageFilePath:StorageReference? = mStorage?.child(imageUri?.lastPathSegment.toString())
+//
+//
+//        if (imageUri != null) {
+//            imageFilePath?.putFile(imageUri)?.addOnSuccessListener {
+//                imageFilePath.downloadUrl.addOnSuccessListener {
+//                    var  profileUpdate: UserProfileChangeRequest? = new UserProfileChangeRequest.Builder().setDisplayName(
+//                        textUserName.toString()
+//                    ).setUri(uri)
+//                        .build()
+//                }
+//
+//            }
+//        }
+
+    }
+
+
+    private fun setImage(){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if(checkSelfPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
+                // Permission Denied
+                val permission = arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE)
+                requestPermissions(permission, 1001)
+            }
+            else {
+                // Permission Granted
+                pickImageFromGallery()
+            }
+        }else {
+            pickImageFromGallery()
+        }
+    }
+
+    private fun pickImageFromGallery(){
+        val intent = Intent(Intent.ACTION_PICK)
+        intent.type = "image/*"
+        startActivityForResult(intent, 1000)
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        when(requestCode){
+            1001 -> {
+                if(grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                    pickImageFromGallery()
+                }else{
+                    Toast.makeText(this,"Permiso Denegado", Toast.LENGTH_SHORT).show()
+                }
             }
         }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(resultCode == Activity.RESULT_OK && requestCode == 1000){
+            imageUri = data?.data!!
+            image_new_user_photo.setImageURI(imageUri)
+            //val imageBitmap = data?.extras?.get("data") as Bitmap
+            //uploadImageAndSave()
+        }
+    }
+
+    private fun uploadImageAndSave() {
+//        val baos = ByteArrayOutputStream()
+//        val storageRef = FirebaseStorage.getInstance()
+//            .reference.child("pics/${FirebaseAuth.getInstance().currentUser?.uid}")
+//
+//        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+//        val image = baos.toByteArray()
+//        val upload = storageRef.putBytes(image)
+//
+//        upload.addOnCompleteListener{ uploadTask ->
+//            if(uploadTask.isSuccessful){
+//                storageRef.downloadUrl.addOnCompleteListener { urlTask ->
+//                    urlTask.result?.let{
+//                        imageUri = it
+//                        image_new_user_photo.setImageBitmap(bitmap)
+//                    }
+//                }
+//            }
+//
+//        }
     }
 
     private fun validateEmail(): Boolean {
@@ -85,8 +205,8 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun validatePassword(): Boolean {
-        val pass: String = textPass?.getEditText()?.getText().toString().trim()
-        val confirmPass: String = textConfirmPass?.getEditText()?.getText().toString().trim()
+        val pass: String = textPass?.editText?.text.toString().trim()
+        val confirmPass: String = textConfirmPass?.editText?.text.toString().trim()
 
         return if (pass.isEmpty()) {
             textPass?.error = "Este Campo no puede estar Vacio"
@@ -117,7 +237,7 @@ class RegisterActivity : AppCompatActivity() {
     private fun showHome(email:String,provider:ProviderType){
         val homeIntent = Intent(this, HomePageActivity::class.java)
             intent.putExtra("email", email)
-
+            Log.d("CORREO", email)
         startActivity(homeIntent)
     }
 }

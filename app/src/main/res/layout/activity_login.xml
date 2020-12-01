@@ -32,28 +32,9 @@
         app:layout_constraintStart_toStartOf="@+id/image_logo"
         app:layout_constraintTop_toBottomOf="@+id/image_logo" />
 
-    <EditText
-        android:id="@+id/text_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:ems="10"
-        android:fontFamily="sans-serif-condensed"
-        android:hint="@string/title_email"
-        android:inputType="textEmailAddress"
-        android:textColor="#FFFFFF"
-        android:textColorHint="@color/Black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_title_login"
-        android:autofillHints="" />
 
-    <EditText
-        android:id="@+id/text_password"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_container_email_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -61,16 +42,62 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:ems="10"
-        android:fontFamily="sans-serif-condensed"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:textColorHint="@color/Black"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/error_appearance"
+        app:hintTextAppearance="@style/error_appearance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_email"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/text_title_login">
 
+        <EditText
+            android:id="@+id/text_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:autofillHints=""
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="@string/title_email"
+            android:inputType="textEmailAddress"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@color/Black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_title_login" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_container_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/error_appearance"
+        app:hintTextAppearance="@style/error_appearance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_container_email_login">
+
+        <EditText
+            android:id="@+id/text_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:autofillHints=""
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/Black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
         android:id="@+id/checkbox_remind_me"
@@ -80,8 +107,8 @@
         android:fontFamily="sans-serif-condensed"
         android:text="@string/recuerdame"
         android:textColor="@color/Black"
-        app:layout_constraintStart_toStartOf="@+id/text_password"
-        app:layout_constraintTop_toBottomOf="@+id/text_password" />
+        app:layout_constraintStart_toStartOf="@+id/text_container_password"
+        app:layout_constraintTop_toBottomOf="@+id/text_container_password" />
 
     <Button
         android:id="@+id/button_login"
@@ -148,7 +175,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.58" />
+        app:layout_constraintGuide_begin="238dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

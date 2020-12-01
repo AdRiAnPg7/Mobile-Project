@@ -8,30 +8,41 @@
     tools:context=".RegisterActivity">
 
     <ImageView
-        android:id="@+id/image_logo"
+        android:id="@+id/image_new_user_photo"
         android:layout_width="100dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="50dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo"
-        android:contentDescription="@string/todo"/>
+        app:layout_constraintTop_toBottomOf="@+id/text_go_to_register"
+        app:srcCompat="@drawable/add_image_profile" />
+
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="@+id/text_go_to_register"
+        app:layout_constraintEnd_toStartOf="@+id/text_go_to_register"
+        app:layout_constraintTop_toTopOf="@+id/text_go_to_register"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/text_go_to_register"
         android:layout_width="190dp"
         android:layout_height="53dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="sans-serif-condensed"
         android:gravity="center"
         android:text="@string/register"
         android:textColor="@color/Black"
         android:textSize="38sp"
-        app:layout_constraintEnd_toEndOf="@+id/image_logo"
-        app:layout_constraintStart_toStartOf="@+id/image_logo"
-        app:layout_constraintTop_toBottomOf="@+id/image_logo" />
+        app:layout_constraintEnd_toEndOf="@+id/image_new_user_photo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/image_new_user_photo"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_container_email"
@@ -39,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         app:errorEnabled="true"
@@ -47,7 +58,7 @@
         app:hintTextAppearance="@style/error_appearance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_go_to_register">
+        app:layout_constraintTop_toBottomOf="@+id/image_new_user_photo">
 
         <EditText
             android:id="@+id/text_new_email"
