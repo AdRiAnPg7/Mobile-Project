@@ -1,23 +1,16 @@
-package com.foundmypet.Fragments
+package com.foundmypet.fragments
 
-import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.foundmypet.Post
+import com.e.domain.Post
 import com.foundmypet.PostListAdapter
 import com.foundmypet.R
-import com.foundmypet.ViewModel.MainViewModel
-import kotlinx.android.synthetic.main.activity_post_page.*
 import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.row_post.*
 
 class HomeFragment : Fragment() {
 

@@ -1,13 +1,12 @@
-package com.foundmypet.Activities
+package com.foundmypet.activities
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import com.foundmypet.R
 
-class CreateTypePostActivity : AppCompatActivity()  {
+class PostPageImageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_create_lost_pet_post)
-
+        setContentView(R.layout.activity_post_page_image)
     }
 }

@@ -11,16 +11,17 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.HomeNavActivity"/>
-        <activity android:name=".Activities.PostPageImageActivity" />
+        <activity android:name=".activities.HomeNavActivity"/>
+        <activity android:name=".activities.PostPageImageActivity" />
         <activity android:name=".PostPageActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".UserProfileActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".HomePageActivity" />
+
         <activity android:name=".LoginActivity" />
         <activity android:name=".CreateLostPetPostActivity" />
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".SplashScreenActivity"/>
+        <activity android:name=".HomePageActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

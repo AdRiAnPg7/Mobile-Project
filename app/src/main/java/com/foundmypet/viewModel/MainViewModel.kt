@@ -1,11 +1,11 @@
-package com.foundmypet.ViewModel
+package com.foundmypet.viewModel
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.foundmypet.Domain.Repo
-import com.foundmypet.Post
+import com.e.domain.Post
 
 class MainViewModel: ViewModel() {
     private val repo = Repo()

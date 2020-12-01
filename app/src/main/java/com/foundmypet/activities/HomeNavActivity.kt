@@ -1,11 +1,11 @@
-package com.foundmypet.Activities
+package com.foundmypet.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.foundmypet.Fragments.AddPostFragment
-import com.foundmypet.Fragments.HomeFragment
-import com.foundmypet.Fragments.SearchFragment
+import com.foundmypet.fragments.AddPostFragment
+import com.foundmypet.fragments.HomeFragment
+import com.foundmypet.fragments.SearchFragment
 import com.foundmypet.R
 import kotlinx.android.synthetic.main.activity_home_nav.*
 

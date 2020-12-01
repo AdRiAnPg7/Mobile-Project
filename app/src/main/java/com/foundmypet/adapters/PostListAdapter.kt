@@ -5,10 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
+import com.e.domain.Post
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.row_post.view.*
-import kotlin.coroutines.coroutineContext
 
 class PostListAdapter(private val context: Context?): RecyclerView.Adapter<PostListAdapter.PostListViewHolder>() {
     //    class PostListViewHolder(view: View): RecyclerView.ViewHolder(view)
@@ -44,7 +43,7 @@ class PostListAdapter(private val context: Context?): RecyclerView.Adapter<PostL
 
     inner class PostListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
 
-        fun bindView(post:Post){
+        fun bindView(post: Post){
 //            Glide.with(context).load(post.postUserImage).into(itemView.userImageView)
             val picasso = Picasso.get()
             picasso.load(post.postUserImage).into(itemView.userImageView)

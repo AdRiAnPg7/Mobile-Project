@@ -3,7 +3,7 @@ package com.foundmypet.Domain
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.foundmypet.Post
+import com.e.domain.Post
 import com.google.firebase.firestore.FirebaseFirestore
 
 class Repo {

@@ -1,4 +1,4 @@
-package com.foundmypet.Fragments
+package com.foundmypet.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.foundmypet.R
 
-class AddPostFragment : Fragment() {
+class SearchFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,6 +17,7 @@ class AddPostFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_add_post, container, false)
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_search, container, false)
     }
 }

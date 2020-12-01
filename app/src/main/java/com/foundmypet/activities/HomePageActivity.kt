@@ -8,10 +8,10 @@ import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.foundmypet.Fragments.AddPostFragment
-import com.foundmypet.Fragments.HomeFragment
-import com.foundmypet.Fragments.LostPetsFrament
-import com.foundmypet.Fragments.SearchFragment
+import com.foundmypet.fragments.AddPostFragment
+import com.foundmypet.fragments.HomeFragment
+import com.foundmypet.fragments.LostPetsFrament
+import com.foundmypet.fragments.SearchFragment
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_home_page.*
