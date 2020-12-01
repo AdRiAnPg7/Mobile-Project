@@ -1,4 +1,3 @@
-include ':framework'
 include ':domain'
 include ':data'
 include ':usesCases'
