@@ -1,4 +1,4 @@
-package com.e.framework
+package edu.bo.framework
 
 import org.junit.Test
 
