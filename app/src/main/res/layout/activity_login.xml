@@ -81,7 +81,8 @@
         app:hintTextAppearance="@style/error_appearance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_container_email_login">
+        app:layout_constraintTop_toBottomOf="@+id/text_container_email_login"
+        app:passwordToggleEnabled="true">
 
         <EditText
             android:id="@+id/text_password"
@@ -95,7 +96,8 @@
             android:inputType="textPassword"
             android:textColorHint="@color/Black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+           />
 
     </com.google.android.material.textfield.TextInputLayout>
 

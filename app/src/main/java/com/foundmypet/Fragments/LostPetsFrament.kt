@@ -7,14 +7,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.foundmypet.Post
 import com.foundmypet.PostListAdapter
 import com.foundmypet.R
 import com.foundmypet.ViewModel.MainViewModel
+import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_post_page.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.row_post.*
@@ -34,6 +40,8 @@ class LostPetsFrament : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        setup()
+
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
@@ -48,11 +56,11 @@ class LostPetsFrament : Fragment() {
         Log.d("IDPOST","AQUI SUPER DESPUES DEL ADAPTER")
         //POST LIST
         val list: MutableList<Post> = mutableListOf<Post>()
-        list.add(Post("1","Busco a mi mascotita plox","un link generico","https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/07/25/Recortada/img_econcejo_20180730-165058_imagenes_lv_terceros_istock-894361286-k0hH--656x438@LaVanguardia-Web.jpg","Alguien llamado x","5/5/2020"))
-        list.add(Post("1","Busco a mi mascotita plox","un link generico","https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/07/25/Recortada/img_econcejo_20180730-165058_imagenes_lv_terceros_istock-894361286-k0hH--656x438@LaVanguardia-Web.jpg","Alguien llamado x","5/5/2020"))
-        list.add(Post("1","Busco a mi mascotita plox","un link generico","https://i.pinimg.com/736x/5f/49/e1/5f49e11efad480bf5be95e2cd30332f4.jpg","Alguien llamado x","5/5/2020"))
-        list.add(Post("1","Busco a mi mascotita plox","un link generico","https://i.pinimg.com/736x/5f/49/e1/5f49e11efad480bf5be95e2cd30332f4.jpg","Alguien llamado x","5/5/2020"))
-        list.add(Post("1","Busco a mi mascotita plox","un link generico","https://i.pinimg.com/736x/5f/49/e1/5f49e11efad480bf5be95e2cd30332f4.jpg","Alguien llamado x","5/5/2020"))
+        list.add(Post("1","Busco a mi  plox","un link generico","https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/07/25/Recortada/img_econcejo_20180730-165058_imagenes_lv_terceros_istock-894361286-k0hH--656x438@LaVanguardia-Web.jpg","Alguien llamado x","5/5/2020"))
+        list.add(Post("1","Busco a mi  plox","un link generico","https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/07/25/Recortada/img_econcejo_20180730-165058_imagenes_lv_terceros_istock-894361286-k0hH--656x438@LaVanguardia-Web.jpg","Alguien llamado x","5/5/2020"))
+        list.add(Post("1","Busco a mi  plox","un link generico","https://i.pinimg.com/736x/5f/49/e1/5f49e11efad480bf5be95e2cd30332f4.jpg","Alguien llamado x","5/5/2020"))
+        list.add(Post("1","Busco a mi  plox","un link generico","https://i.pinimg.com/736x/5f/49/e1/5f49e11efad480bf5be95e2cd30332f4.jpg","Alguien llamado x","5/5/2020"))
+        list.add(Post("1","Busco a mi  plox","un link generico","https://i.pinimg.com/736x/5f/49/e1/5f49e11efad480bf5be95e2cd30332f4.jpg","Alguien llamado x","5/5/2020"))
         list.add(Post("1","Busco a mi mascotita plox","un link generico","https://i.pinimg.com/736x/5f/49/e1/5f49e11efad480bf5be95e2cd30332f4.jpg","Alguien llamado x","5/5/2020"))
         list.add(Post("1","Busco a mi mascotita plox","un link generico","https://www.seoptimer.com/es/blog/wp-content/uploads/2016/05/foto-de-perfil-adecuada.jpg","Alguien llamado x","5/5/2020"))
         list.add(Post("1","Busco a mi mascotita plox","un link generico","https://www.seoptimer.com/es/blog/wp-content/uploads/2016/05/foto-de-perfil-adecuada.jpg","Alguien llamado x","5/5/2020"))
@@ -62,7 +70,9 @@ class LostPetsFrament : Fragment() {
         adapter.setListData(list)
         adapter.notifyDataSetChanged()
 
+        //
 
+        setup()
 
         Log.d("IDPOST","ANTES DEL OOBSERVEDATA")
         //observeData()
@@ -72,6 +82,14 @@ class LostPetsFrament : Fragment() {
 //        val linearLayoutManager = LinearLayoutManager(context)
 //        linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
 //        recyclerViewMain.layoutManager = linearLayoutManager
+    }
+
+    private fun setup() {
+
+        val container = view?.findViewById<ConstraintLayout>(R.id.container_card_background)
+        Log.d("FONDO", "AQUI")
+        container?.background = ContextCompat.getDrawable(requireContext(), R.drawable.container_post_2)
+        Log.d("FONDO", container?.background.toString())
     }
 
 //    fun observeData(){

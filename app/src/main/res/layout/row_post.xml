@@ -22,11 +22,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_card_background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-
-            android:background="@drawable/container_post_3">
+            android:background="@drawable/container_post_1">
 
             <ImageView
                 android:id="@+id/postImageView"
