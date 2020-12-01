@@ -8,24 +8,23 @@ import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
+
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        // Redirect Register Activity
         val textGoToRegister = findViewById<TextView>(R.id.text_go_to_register)
-
         textGoToRegister.setOnClickListener{
             startActivity(Intent(this,RegisterActivity::class.java))
         }
-        //setup
+
+        // Setup
         setup()
     }
 
     private fun setup(){
-        title = "Autentificacion"
-
-
         button_login.setOnClickListener {
             if(text_email.text.isNotEmpty() && text_password.text.isNotEmpty()){
                 FirebaseAuth.getInstance()
@@ -34,7 +33,7 @@ class LoginActivity : AppCompatActivity() {
                     text_password.text.toString())
                     .addOnCompleteListener{
                         if (it.isSuccessful){
-                            showHome(it.result?.user?.email?:"Este Email No existe :v", ProviderType.BASIC)
+                            showHome(it.result?.user?.email?:"Este Email No Esta Registrado", ProviderType.BASIC)
                         }else{
                             showAlert()
                         }
@@ -47,7 +46,7 @@ class LoginActivity : AppCompatActivity() {
     private fun showAlert(){
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
-        builder.setMessage("Se ha producido un error autenticando al usuario")
+        builder.setMessage("El Correo o Contraseña es Incorrecta")
         builder.setPositiveButton("Aceptar", null)
         val dialog: AlertDialog = builder.create()
         dialog.show()

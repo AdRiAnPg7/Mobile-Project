@@ -9,7 +9,8 @@
     android:fitsSystemWindows="true"
     tools:context=".HomePageActivity"
     android:layoutDirection="rtl"
-    tools:openDrawer="start">
+    tools:openDrawer="start"
+    android:background="@drawable/background">
 
 
 

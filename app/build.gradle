@@ -93,5 +93,7 @@ dependencies {
     //lifecycle
     implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
 
+    // Label on input
+    implementation 'androidx.appcompat:appcompat:1.1.0'
 
 }

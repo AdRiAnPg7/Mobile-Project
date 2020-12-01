@@ -12,14 +12,13 @@
         <activity android:name=".Activities.HomeNavActivity"/>
         <activity android:name=".Activities.PostPageImageActivity" />
         <activity android:name=".PostPageActivity" />
-        <activity android:name=".SearcherActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".UserProfileActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".SplashScreenActivity" />
+        <activity android:name=".HomePageActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".CreateLostPetPostActivity" />
-        <activity android:name=".HomePageActivity">
+        <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

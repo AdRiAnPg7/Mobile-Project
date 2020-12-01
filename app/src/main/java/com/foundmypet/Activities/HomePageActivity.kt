@@ -1,6 +1,7 @@
 package com.foundmypet
 
 
+import android.content.ContentProvider
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -9,7 +10,9 @@ import androidx.fragment.app.Fragment
 import com.foundmypet.Fragments.AddPostFragment
 import com.foundmypet.Fragments.HomeFragment
 import com.foundmypet.Fragments.SearchFragment
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_home_page.*
+import kotlinx.android.synthetic.main.sidebar_header.*
 
 
 enum class ProviderType{
@@ -32,6 +35,10 @@ class HomePageActivity : AppCompatActivity() {
         drawer_navigation_view.setNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.sidebar_edit_post_item -> startActivity(Intent(this, UserProfileActivity::class.java))
+                R.id.sidebar_end_session_item -> {
+                    FirebaseAuth.getInstance().signOut()
+                    startActivity(Intent(this, MainActivity::class.java))
+                }
             }
             true
         }
@@ -48,6 +55,15 @@ class HomePageActivity : AppCompatActivity() {
             true
         }
 
+        // Setup
+        val bundle: Bundle? = intent.extras
+        val email: String? = bundle?.getString("email")
+        setup(email ?:"Sin Correo")
+    }
+
+    // Setup
+    private fun setup(email:String){
+        header_email_text.text = email
     }
 
 

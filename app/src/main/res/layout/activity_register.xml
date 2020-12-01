@@ -33,77 +33,151 @@
         app:layout_constraintStart_toStartOf="@+id/image_logo"
         app:layout_constraintTop_toBottomOf="@+id/image_logo" />
 
-    <EditText
-        android:id="@+id/text_new_email"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_container_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:fontFamily="sans-serif-condensed"
-        android:hint="@string/title_email"
-        android:inputType="textEmailAddress"
-        android:textColor="#FFFFFF"
-        android:textColorHint="@color/Black"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/error_appearance"
+        app:hintTextAppearance="@style/error_appearance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_go_to_register">
+
+        <EditText
+            android:id="@+id/text_new_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="@string/title_email"
+            android:inputType="textEmailAddress"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@color/Black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_go_to_register" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_container_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="15"
+        app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_go_to_register" />
+        app:layout_constraintTop_toBottomOf="@+id/text_container_email">
 
-    <EditText
-        android:id="@+id/text_new_password"
+        <EditText
+            android:id="@+id/text_new_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:autofillHints=""
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="@string/title_user_name"
+            android:inputType="textEmailAddress"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@color/Black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_go_to_register" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_container_new_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:ems="10"
-        android:fontFamily="sans-serif-condensed"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:textColorHint="@color/Black"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_new_email"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/text_container_user_name"
+        app:passwordToggleEnabled="true">
 
-    <EditText
-        android:id="@+id/text_new_password_confirm"
+        <EditText
+            android:id="@+id/text_new_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/Black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="372dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_container_new_confirm_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:ems="10"
-        android:fontFamily="sans-serif-condensed"
-        android:hint="@string/confirmPassword"
-        android:inputType="textPassword"
-        android:textColorHint="@color/Black"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_new_password"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/text_container_new_password"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/text_new_password_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="@string/confirmPassword"
+            android:inputType="textPassword"
+            android:textColorHint="@color/Black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_new_password" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
         android:id="@+id/check_box_accept_conditions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-condensed"
         android:text="@string/acepto_los_terminos_y_condiciones"
         android:textColor="@color/Black"
-        app:layout_constraintStart_toStartOf="@+id/text_new_password"
-        app:layout_constraintTop_toBottomOf="@+id/text_new_password_confirm" />
+        app:layout_constraintStart_toStartOf="@+id/text_container_new_confirm_password"
+        app:layout_constraintTop_toBottomOf="@+id/text_container_new_confirm_password" />
 
     <Button
         android:id="@+id/button_login_confirm"
@@ -111,7 +185,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:background="@drawable/button_sign_up"
@@ -123,7 +197,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/check_box_accept_conditions" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
