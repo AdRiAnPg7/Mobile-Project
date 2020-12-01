@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.foundmypet.Fragments.AddPostFragment
 import com.foundmypet.Fragments.HomeFragment
+import com.foundmypet.Fragments.LostPetsFrament
 import com.foundmypet.Fragments.SearchFragment
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
@@ -24,6 +25,7 @@ class HomePageActivity : AppCompatActivity() {
     private val homeFragment = HomeFragment()
     private val searchFragment = SearchFragment()
     private val addPostFragment = AddPostFragment()
+    private val lostPetFragment = LostPetsFrament()
 
     //Vars Auth
 
@@ -44,6 +46,7 @@ class HomePageActivity : AppCompatActivity() {
                     FirebaseAuth.getInstance().signOut()
                     startActivity(Intent(this, MainActivity::class.java))
                 }
+                R.id.sidebar_lost_pets_item ->  replaceFragment(lostPetFragment)
             }
             true
         }

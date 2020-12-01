@@ -31,7 +31,7 @@
             <ImageView
                 android:id="@+id/postImageView"
                 android:layout_width="340dp"
-                android:layout_height="340dp"
+                android:layout_height="260dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
