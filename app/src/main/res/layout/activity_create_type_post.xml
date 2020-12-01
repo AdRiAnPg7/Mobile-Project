@@ -5,12 +5,12 @@
     android:id="@+id/constrainLayout_type_post"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#004d69">
+    android:background="#BAE3C3">
 
     <Button
         android:id="@+id/btn_type_post_found_pet"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginTop="250dp"
         android:background="@drawable/btn_type_post_yellow_radius"
         android:paddingLeft="10dp"
@@ -25,7 +25,7 @@
     <Button
         android:id="@+id/btn_type_post_lost_pet"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginBottom="250dp"
         android:background="@drawable/btn_type_post_cian_radius"
         android:paddingLeft="10dp"

@@ -3,6 +3,7 @@
     <string name="login">Ingresar</string>
     <string name="register">Registrarse</string>
     <string name="title_email">Correo</string>
+    <string name="title_user_name">UserName</string>
     <string name="password">Contraseña</string>
     <string name="confirm">Confirmar</string>
     <string name="confirmPassword">Confirmar Contraseña</string>

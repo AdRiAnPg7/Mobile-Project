@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.activity_post_page.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.row_post.*
 
-class HomeFragment : Fragment() {
+class LostPetsFrament : Fragment() {
 
     // Vars
     //private  val viewModel by lazy { ViewModelProviders.of(this).get(MainViewModel::class.java) }
@@ -61,6 +61,7 @@ class HomeFragment : Fragment() {
         //ADAPTER
         adapter.setListData(list)
         adapter.notifyDataSetChanged()
+
 
 
         Log.d("IDPOST","ANTES DEL OOBSERVEDATA")
