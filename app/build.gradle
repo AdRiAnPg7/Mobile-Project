@@ -30,7 +30,7 @@ dependencies {
     //Clean Architecture
     implementation project(":data")
     implementation project(":domain")
-    //implementation project(":framework")
+    implementation project(":framework")
     implementation project(":usesCases")
 
     //value dependecies

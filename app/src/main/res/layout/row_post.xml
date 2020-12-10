@@ -6,16 +6,15 @@
     android:layout_height="wrap_content"
     android:layout_margin="20dp"
     android:layoutDirection="ltr"
-    tools:openDrawer="start"
-    >
+    tools:openDrawer="start">
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:contentPaddingBottom="5dp"
-        app:contentPaddingRight="5dp"
         app:cardBackgroundColor="#74050505"
         app:cardCornerRadius="10dp"
+        app:contentPaddingBottom="5dp"
+        app:contentPaddingRight="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,9 +23,9 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:background="@drawable/container_post_3"
 
-            android:background="@drawable/container_post_3">
+            android:padding="10dp">
 
             <ImageView
                 android:id="@+id/postImageView"

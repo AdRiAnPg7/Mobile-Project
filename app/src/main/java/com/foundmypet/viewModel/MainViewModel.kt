@@ -4,23 +4,26 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.foundmypet.Domain.Repo
 import com.e.domain.Post
+import com.e.usescases.GetPosts
+import kotlinx.coroutines.launch
 
-class MainViewModel: ViewModel() {
-    private val repo = Repo()
+class MainViewModel(private val listPosts: GetPosts): ScopedViewModel() {
+    init {
+        initScope()
+    }
 
-    fun fetchPostData(): LiveData<MutableList<Post>> {
-        Log.d("IDPOST","Antesaaaaaaaaaaa")
-        val mutableData = MutableLiveData<MutableList<Post>>()
-        Log.d("IDPOST",mutableData.toString())
-        repo.getPostData().observeForever { postList ->
-            Log.d("IDPOST","222222222222222")
-            mutableData.value = postList
-            Log.d("IDPOST","33333333333333333333")
+    private val _model = MutableLiveData<UiModel>()
+    val model: LiveData<UiModel>
+        get() = _model
 
+    sealed class UiModel {
+        class Content(val post: List<Post>) : UiModel()
+    }
+
+    fun loadPosts(){
+        launch {
+            _model.value = UiModel.Content(listPosts.invoke())
         }
-        Log.d("IDPOST",mutableData.toString()+" DESPUES ")
-        return mutableData
     }
 }

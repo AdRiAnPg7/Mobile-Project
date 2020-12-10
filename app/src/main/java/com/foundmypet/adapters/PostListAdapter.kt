@@ -9,50 +9,27 @@ import com.e.domain.Post
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.row_post.view.*
 
-class PostListAdapter(private val context: Context?): RecyclerView.Adapter<PostListAdapter.PostListViewHolder>() {
-    //    class PostListViewHolder(view: View): RecyclerView.ViewHolder(view)
-    private var dataList = mutableListOf<Post>()
+class PostListAdapter(val list: List<Post>): RecyclerView.Adapter<PostListAdapter.PostListViewHolder>() {
+    class PostListViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
+        fun render(post: Post){
+            val picasso = Picasso.get()
+            picasso.load(post.postUserImage).into(view.userImageView)
 
-    fun setListData(data:MutableList<Post>){
-        dataList = data
+            view.usernameTextView.text = post.postUserName
+            view.descriptionTextView.text = post.postDescription
+            //Arreglar lo de abajo, la fecha de antiguedad se debe calcular
+            view.commentAntiquityTextView.text = post.postDate
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostListViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.row_post, parent, false)
-        return PostListViewHolder(v)
-    }
-
-    override fun getItemCount(): Int {
-//        return this.list.size
-        return if(dataList.size > 0){
-            dataList.size
-        }else{
-            0
-        }
+        val viewInflater = LayoutInflater.from(parent.context)
+        return PostListViewHolder(viewInflater.inflate(R.layout.row_post, parent,false))
     }
 
     override fun onBindViewHolder(holder: PostListViewHolder, position: Int) {
-//        val post = this.list[position]
-//        holder.itemView.usernameTextView.text = post.postUserName
-//        holder.itemView.descriptionTextView.text = post.postDescription
-//        holder.itemView.commentAntiquityTextView.text = post.postDate
-        val post: Post = dataList[position]
-        holder.bindView(post)
-
+        holder.render(list[position])
     }
 
-    inner class PostListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-
-        fun bindView(post: Post){
-//            Glide.with(context).load(post.postUserImage).into(itemView.userImageView)
-            val picasso = Picasso.get()
-            picasso.load(post.postUserImage).into(itemView.userImageView)
-
-            itemView.usernameTextView.text = post.postUserName
-            itemView.descriptionTextView.text = post.postDescription
-            itemView.commentAntiquityTextView.text = post.postDate
-        }
-    }
-
-
+    override fun getItemCount(): Int = list.size
 }
