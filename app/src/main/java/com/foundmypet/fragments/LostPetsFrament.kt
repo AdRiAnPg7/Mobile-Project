@@ -33,7 +33,7 @@ class LostPetsFrament : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //INIT ADAPTER
+        /*/INIT ADAPTER
         adapter = PostListAdapter(context)
         Log.d("IDPOST","AQUI DESPUES DEL ADAPTER")
         recyclerViewMain.layoutManager = LinearLayoutManager(context)
@@ -72,5 +72,5 @@ class LostPetsFrament : Fragment() {
 //            adapter.setListData(it)
 //            adapter.notifyDataSetChanged()
 //        })
-//    }
+//    */}
 }
