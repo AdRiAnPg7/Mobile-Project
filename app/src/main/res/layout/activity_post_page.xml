@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#004d69"
-    tools:context=".Activities.PostPageActivity">
+    tools:context=".activities.PostPageActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline34"
