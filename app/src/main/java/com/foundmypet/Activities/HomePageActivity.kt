@@ -7,6 +7,8 @@ import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.foundmypet.Fragments.AddPostFragment
 import com.foundmypet.Fragments.HomeFragment
@@ -99,6 +101,7 @@ class HomePageActivity : AppCompatActivity() {
             replace(R.id.fragment_container,fragment)
             commit()
         }
+
 
 
 }

@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RelativeLayout
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -33,6 +36,12 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        Log.d("FONDO", "HEY")
+        val container : RelativeLayout? = view?.findViewById<RelativeLayout>(R.id.container_card_background)
+        Log.d("FONDO", "AQUI")
+        container?.background = ContextCompat.getDrawable(requireContext(), R.drawable.container_post_2)
+
+        Log.d("FONDO", container?.background.toString())
 
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
