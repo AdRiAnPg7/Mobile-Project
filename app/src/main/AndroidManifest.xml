@@ -17,14 +17,12 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".UserProfileActivity" />
         <activity android:name=".RegisterActivity" />
-
         <activity android:name=".LoginActivity" />
         <activity android:name=".CreateLostPetPostActivity" />
         <activity android:name=".SplashScreenActivity"/>
         <activity android:name=".HomePageActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
