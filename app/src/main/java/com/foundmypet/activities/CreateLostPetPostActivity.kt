@@ -7,7 +7,12 @@ class CreateLostPetPostActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_lost_pet_post)
+        savePost()
+    }
 
+    fun savePost(){
+    }
+    fun clearTexts(){
     }
 }
 
