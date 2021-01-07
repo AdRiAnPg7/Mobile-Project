@@ -4,68 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_splash_screen"
+    tools:context=".SplashScreenActivity"
     android:background="@drawable/background">
 
     <ImageView
-        android:id="@+id/imageLogoSplash"
+        android:id="@+id/image_logo_splash"
         android:layout_width="179dp"
         android:layout_height="159dp"
         android:contentDescription="@string/todo"
         android:foregroundGravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline13"
-        app:layout_constraintEnd_toStartOf="@+id/guideline15"
+        app:layout_constraintBottom_toTopOf="@+id/guide_line_center_splash_screen"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_right_splash_screen"
         app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="@+id/guideline14"
-        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_left_splash_screen"
+        app:layout_constraintTop_toTopOf="@+id/guide_line_up_splash_screen"
         app:layout_constraintVertical_bias="0.71"
         app:srcCompat="@drawable/huella" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline10"
+        android:id="@+id/guide_line_up_splash_screen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.2" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline13"
+        android:id="@+id/guide_line_center_splash_screen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline14"
+        android:id="@+id/guide_line_left_splash_screen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.25" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline15"
+        android:id="@+id/guide_line_right_splash_screen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.75" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline16"
+        android:id="@+id/guide_line_down_splash_screen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.65" />
 
     <ImageView
-        android:id="@+id/imageTextSplash"
+        android:id="@+id/image_text_splash"
         android:layout_width="288dp"
         android:layout_height="87dp"
         android:foregroundGravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline16"
-        app:layout_constraintEnd_toEndOf="@+id/imageLogoSplash"
+        app:layout_constraintBottom_toTopOf="@+id/guide_line_down_splash_screen"
+        app:layout_constraintEnd_toEndOf="@+id/image_logo_splash"
         app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/imageLogoSplash"
-        app:layout_constraintTop_toBottomOf="@+id/imageLogoSplash"
+        app:layout_constraintStart_toStartOf="@+id/image_logo_splash"
+        app:layout_constraintTop_toBottomOf="@+id/image_logo_splash"
         app:srcCompat="@drawable/logo_name"
         android:contentDescription="@string/todo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

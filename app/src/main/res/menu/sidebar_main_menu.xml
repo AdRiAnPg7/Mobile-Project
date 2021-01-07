@@ -8,7 +8,9 @@
     <item
         android:id="@+id/sidebar_edit_post_item"
         android:icon="@drawable/edit_icon"
-        android:title="@string/sidebar_edit_post_string" />
+        android:title="@string/sidebar_edit_post_string"
+        />
+
     <item
         android:id="@+id/sidebar_lost_pets_item"
         android:icon="@drawable/lost_pet"

@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/logo"
+        android:id="@+id/image_logo"
         android:layout_width="130dp"
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,17 +19,17 @@
         app:srcCompat="@drawable/logo" />
 
     <ImageView
-        android:id="@+id/logoName"
+        android:id="@+id/image_logo_name"
         android:layout_width="308dp"
         android:layout_height="56dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/logo"
-        app:layout_constraintStart_toStartOf="@+id/logo"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintEnd_toEndOf="@+id/image_logo"
+        app:layout_constraintStart_toStartOf="@+id/image_logo"
+        app:layout_constraintTop_toBottomOf="@+id/image_logo"
         app:srcCompat="@drawable/logo_name" />
 
     <Button
-        android:id="@+id/buttonGoToLogin"
+        android:id="@+id/button_go_to_login"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/button_white_radius_stroke"
@@ -37,15 +37,15 @@
         android:text="@string/login"
         android:textColor="@color/Black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintBottom_toTopOf="@+id/guide_line_down_buttons_activity_main"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_center_buttons_activity_main"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_left_buttons_activity_main"
+        app:layout_constraintTop_toTopOf="@+id/guide_line_up_buttons_activity_main"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/buttonGoToRegister"
+        android:id="@+id/button_go_to_register"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/button_black_radius"
@@ -53,28 +53,28 @@
         android:text="@string/register"
         android:textColor="@color/White"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintBottom_toTopOf="@+id/guide_line_down_buttons_activity_main"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_right_buttons_activity_main"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        app:layout_constraintStart_toStartOf="@+id/guide_line_center2_buttons_activity_main"
+        app:layout_constraintTop_toTopOf="@+id/guide_line_up_buttons_activity_main" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/guide_line_up_buttons_activity_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_end="160dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/guide_line_down_buttons_activity_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_end="100dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
+        android:id="@+id/guide_line_left_buttons_activity_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
@@ -84,21 +84,21 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
+        android:id="@+id/guide_line_center_buttons_activity_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.48" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
+        android:id="@+id/guide_line_center2_buttons_activity_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.52" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline6"
+        android:id="@+id/guide_line_right_buttons_activity_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"

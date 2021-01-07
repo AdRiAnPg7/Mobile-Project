@@ -1,2 +1,6 @@
+include ':framework'
+include ':domain'
+include ':data'
+include ':usesCases'
 include ':app'
 rootProject.name = "FoundMyPet"

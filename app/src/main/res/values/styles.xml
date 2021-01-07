@@ -2,10 +2,22 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="drawerArrowStyle">@style/DrawnerArrowStyle</item>
+    </style>
+    <style name="DrawnerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+       <item name ="spinBars">true</item>
+        <item name="color">@color/Black</item>
+
 
     </style>
 
+    <style name="error_appearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#FF0000</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+<!--
     <style name="SplashScreem" parent="AppTheme">
         <item name="android:windowBackground">@drawable/splashscreem</item>
     </style>
+    -->
 </resources>
