@@ -7,7 +7,7 @@ import com.google.firebase.ktx.Firebase
 
 class PostDataFirebase: IRemoteDataSource{
     private val database = Firebase.database
-    private val myRef = database.getReference("post")
+    private val myRef = database.getReference("posts")
 
     override fun getAllPosts(): List<Post> {
         TODO("Not yet implemented")

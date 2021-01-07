@@ -17,7 +17,7 @@ class PostListAdapter(val list: List<Post>): RecyclerView.Adapter<PostListAdapte
             picasso.load(post.postUserImage).into(view.userImageView)
 
             view.usernameTextView.text = post.postUserName
-            view.descriptionTextView.text = post.postDescription
+            view.descriptionTextView.text = post.postTitle
             //Arreglar lo de abajo, la fecha de antiguedad se debe calcular
             view.commentAntiquityTextView.text = post.postDate
 
@@ -26,7 +26,7 @@ class PostListAdapter(val list: List<Post>): RecyclerView.Adapter<PostListAdapte
                 val intent = Intent(view.context,PostPageActivity::class.java)
                 intent.putExtra("iPostUserName", post.postUserName)
                 intent.putExtra("iPostDate", post.postDate)
-                intent.putExtra("iPostDescription", post.postDescription)
+                intent.putExtra("iPostDescription", post.postTitle)
                 intent.putExtra("iPostId", post.postId)
                 intent.putExtra("iPostImage", post.postImage)
                 intent.putExtra("iPostUserImage", post.postUserImage)
