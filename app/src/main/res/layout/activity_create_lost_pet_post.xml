@@ -54,17 +54,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor" />
 
-    <ImageButton
-        android:id="@+id/image_checkbox_create_lost_pet_post"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/guide_line_right_lost_pet_post_layout_1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/checkbox_on_background" />
-
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_create_lost_pet_post"
         android:layout_width="341dp"
@@ -277,5 +266,17 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_create_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_white_radius"
+        android:text="@string/create_post"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_right_lost_pet_post_layout_1"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_left_lost_pet_post_layout_1"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_create_lost_pet_post" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

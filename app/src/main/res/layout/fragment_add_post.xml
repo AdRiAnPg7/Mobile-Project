@@ -9,36 +9,18 @@
     tools:context=".fragments.AddPostFragment">
 
     <Button
-        android:id="@+id/btn_type_post_found_pet2"
+        android:id="@+id/btn_type_post_found_pet"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="250dp"
         android:background="@drawable/btn_type_post_yellow_radius"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:text="@string/btn_label_found_pet_create_type_post"
         android:textColor="#000000"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_type_post_lost_pet2"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="150dp"
-        android:background="@drawable/btn_type_post_cian_radius"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="@string/btn_label_lost_pet_create_type_post"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btn_type_post_found_pet2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btn_type_post_found_pet2"
-        app:layout_constraintTop_toBottomOf="@+id/btn_type_post_found_pet2"
-        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

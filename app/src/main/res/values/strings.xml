@@ -16,6 +16,7 @@
     <string name="title_email_address">Carla_Almanza_Alcocer@gmail.com</string>
     <string name="image_profile">Profile Image</string>
     <string name="edit_profile">Edit Profile</string>
+    <string name="create_post">Aceptar</string>
 
     <string name="create_lostPet_post_tittle_hint">Titulo de la publicacion</string>
     <string name="create_lostPet_post_name_label">Nombre:</string>
