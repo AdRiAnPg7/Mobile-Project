@@ -28,13 +28,17 @@ class PostPageActivity : AppCompatActivity() {
 //        image_user_profile_post_page.setImageDrawable(round2)
 
         //obtencion de datos de PostListAdapter
-        val postUserName = intent.getStringExtra("iPostUserName")
-        val postDate = intent.getStringExtra("iPostDate")
-        val postDescription = intent.getStringExtra("iPostDescription")
-        val postId = intent.getStringExtra("iPostId")
+        val postTittle = intent.getStringExtra("iPostTittle")
         val postImage = intent.getStringExtra("iPostImage")
         val postUserImage = intent.getStringExtra("iPostUserImage")
-
+        val postUserName = intent.getStringExtra("iPostUserName")
+        val postDate = intent.getStringExtra("iPostDate")
+        val petName = intent.getStringExtra("iPetName")
+        val petSpecies = intent.getStringExtra("iPetSpecies")
+        val petRace = intent.getStringExtra("iPetRace")
+        val petColor = intent.getStringExtra("iPetColor")
+        val phoneNumber = intent.getStringExtra("iPhoneNumber")
+        val postDescription = intent.getStringExtra("iPostDescription")
 
         text_user_name_post_page.text = postUserName
         text_time_published_post_page.text = postDate
