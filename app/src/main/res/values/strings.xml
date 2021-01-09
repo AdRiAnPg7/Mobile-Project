@@ -31,6 +31,7 @@
     <string name="registrate">REGISTRATE</string>
     <string name="todo">TODO</string>
     <string name="acepto_los_terminos_y_condiciones">ACEPTO LOS TERMINOS Y CONDICIONES</string>
+
     <string name="title_looking_dog">Se Busca Perrito</string>
     <string name="title_user_name_post_page">Augusto Valdez</string>
     <string name="title_time_published_post_page">Hace 4 h</string>
@@ -48,9 +49,8 @@
     <string name="title_number_contact_of_user_post_page">75822674 - 4434513</string>
     <string name="title_description_post_page">Description:</string>
     <string name="title_description_place_post_page">Salio de mi casa por la 6 de agosto...</string>
-    <string name="title_user_name_post_page_image">Augusto Valdez</string>
-    <string name="title_time_published_post_page_image">Hace 4 h</string>
-    <string name="msg_description_image_post_page_image">Imagen mascota</string>
+
+
     <string name="sidebar_text_menu">Menu</string>
     <string name="sidebar_menu_string">Inicio</string>
     <string name="sidebar_edit_post_string">Editar Post</string>
