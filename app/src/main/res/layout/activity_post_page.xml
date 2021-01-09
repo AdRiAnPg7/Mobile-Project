@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#004d69"
-    tools:context=".activities.PostPageActivity">
+    tools:context=".PostPageActivity">
+
+    <TextView
+        android:id="@+id/text_title_looking_dog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/title_looking_dog"
+        android:textColor="@color/White"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline37"
+        app:layout_constraintStart_toStartOf="@+id/guideline34"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline34"
@@ -15,28 +29,35 @@
         app:layout_constraintGuide_begin="16dp"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/image_post_page"
-        android:layout_width="371dp"
-        android:layout_height="154dp"
-
-        android:layout_marginTop="24dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewImagePost"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="16dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toStartOf="@+id/guideline37"
-        app:layout_constraintTop_toBottomOf="@+id/text_title_looking_dog"
-        app:srcCompat="@drawable/perro_surf" />
+        app:layout_constraintStart_toStartOf="@+id/guideline34"
+        app:layout_constraintTop_toBottomOf="@+id/text_title_looking_dog">
+        <ImageView
+            android:id="@+id/image_post_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:contentDescription="ImagePost"
+            app:srcCompat="@drawable/perro_surf"/>
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="0dp"
-
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         app:cardBackgroundColor="@color/Cian"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline37"
         app:layout_constraintStart_toStartOf="@+id/guideline34"
-        app:layout_constraintTop_toBottomOf="@+id/image_post_page">
+        app:layout_constraintTop_toBottomOf="@+id/cardViewImagePost">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
@@ -62,7 +83,8 @@
                 android:scaleType="centerCrop"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/fotopersonacomun" />
+                app:srcCompat="@drawable/fotopersonacomun"
+                android:contentDescription="PostImage"/>
 
             <TextView
                 android:id="@+id/text_user_name_post_page"
@@ -71,6 +93,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginLeft="12dp"
                 android:text="@string/title_user_name_post_page"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/image_user_profile_post_page"
                 app:layout_constraintStart_toEndOf="@+id/image_user_profile_post_page"
                 app:layout_constraintTop_toTopOf="@+id/image_user_profile_post_page"
@@ -94,6 +117,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/title_name_pet_post_page"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/guideline33"
                 app:layout_constraintTop_toBottomOf="@+id/image_user_profile_post_page" />
 
@@ -115,6 +139,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/title_breed_post_page"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/text_title_name_post_page"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline33"
@@ -138,6 +163,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/title_color_post_page"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/text_title_breed_post_page"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline33"
@@ -161,6 +187,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/title_date_lost_post_page"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/text_title_color_post_page"
                 app:layout_constraintHorizontal_bias="0.01"
                 app:layout_constraintStart_toStartOf="@+id/guideline33"
@@ -184,6 +211,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:text="@string/title_last_seen_post_page"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/text_title_date_lost_post_page"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline33"
@@ -207,6 +235,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:text="@string/title_number_contact_post_page"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/text_title_last_seen_post_page"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline33"
@@ -230,6 +259,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:text="@string/title_description_post_page"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/text_title_number_contact_post_page"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline33"
@@ -250,30 +280,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/text_title_looking_dog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="@string/title_looking_dog"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/image_edit_post_page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/text_title_looking_dog"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_edit" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline37"
