@@ -122,5 +122,5 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="@+id/guide_line_right_lost_pet_post_layout_1"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/woman_with_glasses" />
+        app:srcCompat="@drawable/add_image_profile" />
 </androidx.constraintlayout.widget.ConstraintLayout>
