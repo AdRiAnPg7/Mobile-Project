@@ -78,5 +78,10 @@
     <string name="profile_location_symbol">|</string>
     <string name="profile_user_country">CountryName</string>
     <string name="profile_separation_symbol"> | </string>
+    <string name="change_profile_image">Cambiar Foto</string>
+    <string name="edit_city_field">Ciudad</string>
+    <string name="edit_country_field">Pais</string>
+    <string name="edit_cellphone_number">Telefono</string>
+    <string name="edit_email">Correo</string>
 
 </resources>
