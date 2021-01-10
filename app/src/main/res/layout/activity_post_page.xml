@@ -44,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:contentDescription="ImagePost"
+            android:contentDescription="@string/Image"
             app:srcCompat="@drawable/perro_surf"/>
     </androidx.cardview.widget.CardView>
 
@@ -80,11 +80,22 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
+                android:contentDescription="@string/Image"
                 android:scaleType="centerCrop"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/fotopersonacomun"
-                android:contentDescription="PostImage"/>
+                app:srcCompat="@drawable/fotopersonacomun" />
+
+            <TextView
+                android:id="@+id/text_species_post_page"
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:text="@string/species_name_post_page"
+                app:layout_constraintBottom_toBottomOf="@+id/text_species_name_post_page"
+                app:layout_constraintStart_toEndOf="@+id/text_species_name_post_page"
+                app:layout_constraintTop_toTopOf="@+id/text_species_name_post_page" />
 
             <TextView
                 android:id="@+id/text_user_name_post_page"
@@ -98,6 +109,16 @@
                 app:layout_constraintStart_toEndOf="@+id/image_user_profile_post_page"
                 app:layout_constraintTop_toTopOf="@+id/image_user_profile_post_page"
                 app:layout_constraintVertical_bias="0.487" />
+
+            <TextView
+                android:id="@+id/text_species_name_post_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:text="@string/title_species_name_post_page"
+                app:layout_constraintStart_toStartOf="@+id/guideline33"
+                app:layout_constraintTop_toBottomOf="@+id/text_title_name_post_page" />
 
             <TextView
                 android:id="@+id/text_time_published_post_page"
@@ -143,7 +164,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/text_title_name_post_page"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline33"
-                app:layout_constraintTop_toBottomOf="@+id/text_title_name_post_page" />
+                app:layout_constraintTop_toBottomOf="@+id/text_species_name_post_page" />
 
             <TextView
                 android:id="@+id/text_breed_post_page"
@@ -189,7 +210,7 @@
                 android:text="@string/title_date_lost_post_page"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/text_title_color_post_page"
-                app:layout_constraintHorizontal_bias="0.01"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline33"
                 app:layout_constraintTop_toBottomOf="@+id/text_title_color_post_page" />
 
@@ -213,7 +234,7 @@
                 android:text="@string/title_last_seen_post_page"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/text_title_date_lost_post_page"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline33"
                 app:layout_constraintTop_toBottomOf="@+id/text_title_date_lost_post_page" />
 
@@ -267,15 +288,16 @@
 
             <TextView
                 android:id="@+id/text_description_post_page"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
                 android:layout_marginLeft="28dp"
+                android:layout_marginBottom="20dp"
                 android:text="@string/title_description_place_post_page"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/text_title_description_post_page"
-                app:layout_constraintTop_toTopOf="@+id/text_title_description_post_page"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toTopOf="@+id/text_title_description_post_page" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
