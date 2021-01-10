@@ -86,7 +86,6 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toStartOf="@+id/postImageView"
                 app:layout_constraintTop_toBottomOf="@+id/postImageView"
-                android:background="@color/White"
                 android:src="@mipmap/avatar_4"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
