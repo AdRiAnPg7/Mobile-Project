@@ -34,54 +34,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/profile_user_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/profile_user_name"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/image_user_profile" />
-
-            <TextView
-                android:id="@+id/profile_user_country"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_user_country"
-                android:textColor="#BABABA"
-                app:layout_constraintBaseline_toBaselineOf="@+id/profile_separation_symbol"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/profile_separation_symbol" />
-
-            <TextView
-                android:id="@+id/profile_user_department"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_user_department"
-                android:textColor="#BABABA"
-                app:layout_constraintBaseline_toBaselineOf="@+id/profile_separation_symbol"
-                app:layout_constraintEnd_toStartOf="@+id/profile_separation_symbol"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="packed"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TextView
-                android:id="@+id/profile_separation_symbol"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/profile_separation_symbol"
-                android:textColor="#BABABA"
-                app:layout_constraintEnd_toStartOf="@+id/profile_user_country"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/profile_user_department"
-                app:layout_constraintTop_toBottomOf="@+id/profile_user_name" />
-
             <ImageButton
                 android:id="@+id/button_exit_profile"
                 android:layout_width="wrap_content"
@@ -92,7 +44,7 @@
                 android:background="#00FFFFFF"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/icon_left_arrow" />
+                app:srcCompat="@drawable/icon_cancel" />
 
             <ImageButton
                 android:id="@+id/button_edit_profile"
@@ -104,7 +56,48 @@
                 android:background="#00FFFFFF"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/profile_edit_icon" />
+                app:srcCompat="@drawable/icon_confirm" />
+
+            <Button
+                android:id="@+id/change_proffile_image_button"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:background="#00FFFFFF"
+                android:text="@string/change_profile_image"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_user_profile" />
+
+            <EditText
+                android:id="@+id/edit_city_field"
+                android:layout_width="164dp"
+                android:layout_height="43dp"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:hint="@string/edit_city_field"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toStartOf="@+id/edit_country_field"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/change_proffile_image_button" />
+
+            <EditText
+                android:id="@+id/edit_country_field"
+                android:layout_width="146dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:hint="@string/edit_country_field"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/edit_city_field"
+                app:layout_constraintTop_toBottomOf="@+id/change_proffile_image_button" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
@@ -127,41 +120,49 @@
         android:id="@+id/imageView7"
         android:layout_width="25dp"
         android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="56dp"
-        app:layout_constraintStart_toStartOf="@+id/guide_line_right_lost_pet_post_layout_1"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView2"
         app:srcCompat="@drawable/icons_phone" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="56dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginTop="52dp"
-        app:layout_constraintStart_toStartOf="@+id/guide_line_right_lost_pet_post_layout_1"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
         app:srcCompat="@drawable/icon_mail_24" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <EditText
+        android:id="@+id/edit_cellphone_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="58dp"
-        android:text="TextView"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/edit_cellphone_number"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/edit_email"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_cellphone_number" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

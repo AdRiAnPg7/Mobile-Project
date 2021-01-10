@@ -2,7 +2,7 @@
     <string name="app_name">FoundMyPet</string>
     <string name="login">Ingresar</string>
     <string name="register">Registrarse</string>
-    <string name="title_email">Correo</string>
+    <string name="title_email">Correo:</string>
     <string name="title_user_name">UserName</string>
     <string name="password">Contraseña</string>
     <string name="confirm">Confirmar</string>
@@ -10,8 +10,8 @@
     <string name="title_user_profile">User Profile</string>
     <string name="profile_name">Carla</string>
     <string name="title_location">COCHABAMBA, BOLIVIA</string>
-    <string name="title_contact">Contacto</string>
-    <string name="title_cellphone">"Telefono: "</string>
+    <string name="title_contact">Contacto:</string>
+    <string name="title_cellphone">Telefono:</string>
     <string name="title_cellphone_number">+591 70859812</string>
     <string name="title_email_address">Carla_Almanza_Alcocer@gmail.com</string>
     <string name="image_profile">Profile Image</string>
@@ -73,5 +73,15 @@
     <string name="species_name_post_page">Perro</string>
     <string name="Image">image</string>
     <string name="create_lostPet_post_description_label">Descripcion:</string>
+    <string name="profile_user_name">-</string>
+    <string name="profile_user_department">CityName</string>
+    <string name="profile_location_symbol">|</string>
+    <string name="profile_user_country">CountryName</string>
+    <string name="profile_separation_symbol"> | </string>
+    <string name="change_profile_image">Cambiar Foto</string>
+    <string name="edit_city_field">Ciudad</string>
+    <string name="edit_country_field">Pais</string>
+    <string name="edit_cellphone_number">Telefono</string>
+    <string name="edit_email">Correo</string>
 
 </resources>
