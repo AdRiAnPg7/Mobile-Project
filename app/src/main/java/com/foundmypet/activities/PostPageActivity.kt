@@ -47,6 +47,5 @@ class PostPageActivity : AppCompatActivity() {
 
         //imagen usuario
         Picasso.get().load(postUserImage).into(image_user_profile_post_page)
-
     }
 }
