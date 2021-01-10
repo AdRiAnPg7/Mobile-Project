@@ -24,13 +24,17 @@ class PostListAdapter(val list: List<Post>): RecyclerView.Adapter<PostListAdapte
             view.setOnClickListener {
 
                 val intent = Intent(view.context,PostPageActivity::class.java)
-                intent.putExtra("iPostUserName", post.postUserName)
-                intent.putExtra("iPostDate", post.postDate)
-                intent.putExtra("iPostDescription", post.postDescription)
-                intent.putExtra("iPostId", post.postId)
+                intent.putExtra("iPostTittle", post.postTittle)
                 intent.putExtra("iPostImage", post.postImage)
                 intent.putExtra("iPostUserImage", post.postUserImage)
-
+                intent.putExtra("iPostUserName", post.postUserName)
+                intent.putExtra("iPostDate", post.postDate)
+                intent.putExtra("iPetName", post.petName)
+                intent.putExtra("iPetSpecies", post.petSpecies)
+                intent.putExtra("iPetRace", post.petRace)
+                intent.putExtra("iPetColor", post.petColor)
+                intent.putExtra("iPhoneNumber", post.phoneNumber)
+                intent.putExtra("iPostDescription", post.postDescription)
                 view.context.startActivity(intent)
             }
 
