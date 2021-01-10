@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:contentDescription="aaaaaaaaaaaaaaaaa"
+    android:contentDescription="Imagen"
     tools:context=".activities.PostPageImageActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -28,7 +28,7 @@
             android:id="@+id/image_expand_post_page_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="asd"
+            android:contentDescription="aaaaaaaaaaaaaa"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/perro_surf" />
 
@@ -59,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:text="efr"
+                android:text="descripcion"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/image_user_post_page_image"
                 app:layout_constraintTop_toTopOf="@+id/image_user_post_page_image"
@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
-                android:text="rty"
+                android:text="aaaaaaaaa"
                 app:layout_constraintBottom_toBottomOf="@+id/text_title_user_post_page_image"
                 app:layout_constraintStart_toEndOf="@+id/text_title_user_post_page_image"
                 app:layout_constraintTop_toTopOf="@+id/text_title_user_post_page_image"

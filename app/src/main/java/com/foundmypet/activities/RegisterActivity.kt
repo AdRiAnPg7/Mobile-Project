@@ -17,6 +17,8 @@ import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.UserProfileChangeRequest
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
@@ -32,6 +34,7 @@ class RegisterActivity : AppCompatActivity() {
     // Vars User
     private var imgUserPhoto : ImageView? = null
     private var imageUri : Uri? = null
+
     // Vars Text Inputs
     private var textEmail: TextInputLayout? = null
     private var textUserName: TextInputLayout? = null
@@ -75,14 +78,45 @@ class RegisterActivity : AppCompatActivity() {
                 text_new_password.text.toString())
                 ?.addOnCompleteListener(this){ task ->
                     if (task.isSuccessful){
-                        updateUserInfo(textUserName, imageUri, mAuth!!.currentUser)
-                        showHome(task.result?.user?.email?:"Este Email No existe", ProviderType.BASIC)
+                        saveUserInfo(text_new_email.text.toString(),text_new_user_name.text.toString())
+                        //updateUserInfo(textUserName, imageUri, mAuth!!.currentUser)
+                        //showHome(task.result?.user?.email?:"Este Email No existe", ProviderType.BASIC)
                     }else{
+                        //mAuth!!.signOut()
                         showAlert()
                     }
                 }
         }
 
+    }
+
+    private fun saveUserInfo(new_Email: String, new_UserName: String) {
+        val currentUserID = FirebaseAuth.getInstance().currentUser!!.uid
+        val userRef: DatabaseReference = FirebaseDatabase.getInstance().reference.child("Users")
+
+        val userMap = HashMap<String, Any>()
+        userMap["uid"] = currentUserID
+        userMap["email"] = new_Email
+        userMap["user"] = new_UserName
+        userMap["image"] = "https://firebasestorage.googleapis.com/v0/b/foundmypet-b1dae.appspot.com/o/Default%20Images%2Fprofile.png?alt=media&token=d65da2f2-1287-4d42-9b12-eeeb2646289a"
+
+        userRef.child(currentUserID).setValue(userMap)
+            .addOnCompleteListener{ task ->
+                if(task.isSuccessful){
+                    Toast.makeText(this, "Cuenta Creada Correctamente!",Toast.LENGTH_LONG).show()
+
+                    val intent =  Intent(this, HomePageActivity::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+
+                    startActivity(intent)
+                    finish()
+                }
+                else
+                {
+                    //FirebaseAuth.getInstance().signOut()
+                    //showAlert()
+                }
+        }
     }
 
 
@@ -234,10 +268,10 @@ class RegisterActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun showHome(email:String,provider:ProviderType){
+    private fun showHome(myEmail:String,provider:ProviderType){
         val homeIntent = Intent(this, HomePageActivity::class.java)
-            intent.putExtra("email", email)
-            Log.d("CORREO", email)
+            intent.putExtra("email", myEmail)
+            Log.d("CORREO", myEmail)
         startActivity(homeIntent)
     }
 }

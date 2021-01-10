@@ -164,4 +164,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
+    <ImageView
+        android:id="@+id/image_user_profile"
+        android:layout_width="236dp"
+        android:layout_height="215dp"
+        android:contentDescription="@string/image_profile"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_right_lost_pet_post_layout_1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/add_image_profile" />
 </androidx.constraintlayout.widget.ConstraintLayout>

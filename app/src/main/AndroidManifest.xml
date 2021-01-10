@@ -20,8 +20,8 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".CreateLostPetPostActivity" />
-        <activity android:name=".SplashScreenActivity" />
-        <activity android:name=".HomePageActivity">
+        <activity android:name=".HomePageActivity"/>
+        <activity android:name=".SplashScreenActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
