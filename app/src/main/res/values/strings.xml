@@ -69,5 +69,9 @@
 
     <string name="btn_label_found_pet_create_type_post">¿Encontraste una mascota?</string>
     <string name="btn_label_lost_pet_create_type_post">¿Perdiste una mascota?</string>
+    <string name="title_species_name_post_page">Especie:</string>
+    <string name="species_name_post_page">Perro</string>
+    <string name="Image">image</string>
+    <string name="create_lostPet_post_description_label">Descripcion:</string>
 
 </resources>

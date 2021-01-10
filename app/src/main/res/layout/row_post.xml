@@ -46,10 +46,13 @@
                 android:id="@+id/usernameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="TextView"
+                android:text="Name User"
+                android:textSize="15sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/descriptionTextView"
+                app:layout_constraintStart_toEndOf="@+id/userImageView"
                 app:layout_constraintTop_toBottomOf="@+id/postImageView" />
 
             <TextView
@@ -58,7 +61,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginLeft="12dp"
-                android:text="TextView"
+                android:text="User"
+                android:textSize="15sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/usernameTextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -66,15 +70,14 @@
 
             <TextView
                 android:id="@+id/descriptionTextView"
-                android:layout_width="279dp"
-                android:layout_height="26dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="TextView"
+                android:text="Description"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/postImageView"
-                app:layout_constraintStart_toEndOf="@+id/userImageView"
+                app:layout_constraintStart_toStartOf="@+id/usernameTextView"
                 app:layout_constraintTop_toBottomOf="@+id/usernameTextView" />
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -84,9 +87,8 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toStartOf="@+id/postImageView"
                 app:layout_constraintTop_toBottomOf="@+id/postImageView"
-                app:srcCompat="@drawable/ic_launcher_foreground" />
+                android:src="@mipmap/avatar_4"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

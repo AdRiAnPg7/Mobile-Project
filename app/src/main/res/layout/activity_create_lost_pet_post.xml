@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constrainLayout_1_create_lost_pet_post"
@@ -21,21 +22,34 @@
         android:orientation="vertical"
         app:layout_constraintGuide_end="36dp" />
 
-    <ImageButton
-        android:id="@+id/image_btn_create_lost_pet_post"
-        android:layout_width="310dp"
-        android:layout_height="198dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_image_create_post"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:layout_marginTop="16dp"
+        app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_right_lost_pet_post_layout_1"
         app:layout_constraintStart_toStartOf="@+id/guide_line_left_lost_pet_post_layout_1"
-        app:layout_constraintTop_toBottomOf="@+id/text_input_lost_pet_post_tittle"
-        app:srcCompat="@drawable/upload_icon" />
+        app:layout_constraintTop_toBottomOf="@+id/text_input_lost_pet_post_tittle">
+
+        <ImageButton
+            android:id="@+id/image_btn_create_lost_pet_post"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/load_image"
+            tools:ignore="ContentDescription" />
+    </androidx.cardview.widget.CardView>
 
     <EditText
         android:id="@+id/text_input_lost_pet_post_tittle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
         android:background="@drawable/text_view_border"
         android:fontFamily="sans-serif-condensed"
         android:hint="@string/create_lostPet_post_tittle_hint"
@@ -58,12 +72,12 @@
         android:id="@+id/card_view_create_lost_pet_post"
         android:layout_width="341dp"
         android:layout_height="269dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         app:cardBackgroundColor="@color/AliceBlue"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_right_lost_pet_post_layout_1"
         app:layout_constraintStart_toStartOf="@+id/guide_line_left_lost_pet_post_layout_1"
-        app:layout_constraintTop_toBottomOf="@+id/image_btn_create_lost_pet_post">
+        app:layout_constraintTop_toBottomOf="@+id/card_view_image_create_post">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constrainLayout_2_create_lost_pet_post"
@@ -96,7 +110,7 @@
                 android:id="@+id/text_label_create_lost_pet_post_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-condensed"
                 android:labelFor="@id/input_create_lost_pet_post_name"
                 android:text="@string/create_lostPet_post_name_label"
@@ -264,19 +278,52 @@
                 app:layout_constraintStart_toEndOf="@+id/text_create_lost_pet_post_contactPhone"
                 tools:ignore="LabelFor" />
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-condensed"
+                android:labelFor="@id/input_create_lost_pet_post_phoneNumber"
+                android:text="@string/create_lostPet_post_description_label"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="@+id/guide_line_left_lost_pet_post_layout_2"
+                app:layout_constraintTop_toBottomOf="@+id/text_create_lost_pet_post_contactPhone" />
+
+            <EditText
+                android:id="@+id/input_create_lost_pet_post_descripion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/text_view_yellow_radius"
+                android:fontFamily="sans-serif-condensed"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="#000000"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+                app:layout_constraintEnd_toStartOf="@+id/guide_line_right_lost_pet_post_layout_2"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                tools:ignore="LabelFor" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/btn_create_post"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/btn_white_radius"
+        android:layout_width="240dp"
+        android:layout_height="56dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
         android:text="@string/create_post"
-        android:textSize="18sp"
+        android:textColor="@color/White"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_right_lost_pet_post_layout_1"
         app:layout_constraintStart_toStartOf="@+id/guide_line_left_lost_pet_post_layout_1"
-        app:layout_constraintTop_toBottomOf="@+id/card_view_create_lost_pet_post" />
-
+        app:layout_constraintTop_toBottomOf="@+id/card_view_create_lost_pet_post"
+        android:background="@drawable/ic_btn"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
