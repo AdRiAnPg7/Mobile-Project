@@ -35,7 +35,7 @@ class UserAdapter  (
 
     class ViewHolder(@NonNull itemView: View) : RecyclerView.ViewHolder(itemView){
         var userNameTextView: TextView = itemView.findViewById(R.id.header_username_text)
-        var userEmailTextView: TextView = itemView.findViewById(R.id.text_email_address)
+        var userEmailTextView: TextView = itemView.findViewById(R.id.profile_user_name)
         var userImage : ImageView = itemView.findViewById(R.id.image_user_profile)
     }
 }

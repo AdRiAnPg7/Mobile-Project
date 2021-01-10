@@ -42,7 +42,7 @@ class UserProfileActivity : AppCompatActivity() {
                 var name1 = i.child("Users").getValue()
                 currentUserName = name1 as StringBuilder
             }
-            header_username_text.text = currentUserName.toString()
+            profile_user_name.text = currentUserName.toString()
         }
     }
 }
