@@ -8,21 +8,20 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.e.domain.Post
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_post_page.*
 import kotlinx.android.synthetic.main.row_post.view.*
 
 class PostListAdapter(val list: List<Post>): RecyclerView.Adapter<PostListAdapter.PostListViewHolder>() {
     class PostListViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-        fun render(post: Post){
-            val picasso = Picasso.get()
-            picasso.load(post.postUserImage).into(view.userImageView)
 
+        fun render(post: Post){
+            Picasso.get().load(post.postUserImage).into(view.userImageView)
+            Picasso.get().load(post.postImage).into(view.postImageView)
             view.usernameTextView.text = post.postUserName
             view.descriptionTextView.text = post.postDescription
-            //Arreglar lo de abajo, la fecha de antiguedad se debe calcular
             view.commentAntiquityTextView.text = post.postDate
 
             view.setOnClickListener {
-
                 val intent = Intent(view.context,PostPageActivity::class.java)
                 intent.putExtra("iPostTittle", post.postTittle)
                 intent.putExtra("iPostImage", post.postImage)
