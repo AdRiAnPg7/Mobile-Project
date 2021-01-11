@@ -43,8 +43,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardViewImagePost"
-                android:layout_width="340dp"
-                android:layout_height="260dp"
+                android:layout_width="380dp"
+                android:layout_height="285dp"
                 android:layout_marginTop="16dp"
                 android:scaleType="centerCrop"
                 app:cardCornerRadius="10dp"
@@ -98,10 +98,10 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/image_user_profile_post_page"
-                        android:layout_width="66dp"
-                        android:layout_height="60dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:layout_marginStart="16dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
@@ -109,7 +109,7 @@
                         android:scaleType="centerCrop"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/fotopersonacomun" />
+                        android:src="@mipmap/avatar_4"/>
 
                     <TextView
                         android:id="@+id/text_species_post_page"
