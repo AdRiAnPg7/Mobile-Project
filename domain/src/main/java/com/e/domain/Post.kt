@@ -11,4 +11,5 @@ data class Post(val postTittle :String? = null,
                 val petRace:String? = null,
                 val petColor:String? = null,
                 val phoneNumber:String? = null,
-                val postDescription:String? = null)
+                val postDescription:String? = null,
+                val postPublisher:String = "")
