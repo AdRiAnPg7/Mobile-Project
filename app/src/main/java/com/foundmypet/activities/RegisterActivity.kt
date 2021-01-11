@@ -1,6 +1,7 @@
 package com.foundmypet
 
 import android.app.Activity
+import android.app.ProgressDialog
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -17,6 +18,8 @@ import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.UserProfileChangeRequest
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
@@ -26,8 +29,6 @@ import java.io.ByteArrayOutputStream
 
 class RegisterActivity : AppCompatActivity() {
 
-    //Vars Auth
-    private var mAuth : FirebaseAuth? = null
 
     // Vars User
     private var imgUserPhoto : ImageView? = null
@@ -49,8 +50,6 @@ class RegisterActivity : AppCompatActivity() {
         textConfirmPass = findViewById<TextInputLayout>(R.id.text_container_new_confirm_password)
         imgUserPhoto =findViewById<ImageView>(R.id.image_new_user_photo)
 
-        // Firebase
-        mAuth = FirebaseAuth.getInstance()
 
         // Setup
         setup()
@@ -69,39 +68,61 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun register(){
 
-        if( validateEmail() && validatePassword() && validateUserName()){
-            mAuth?.createUserWithEmailAndPassword(
-                text_new_email.text.toString(),
-                text_new_password.text.toString())
-                ?.addOnCompleteListener(this){ task ->
-                    if (task.isSuccessful){
-                        updateUserInfo(textUserName, imageUri, mAuth!!.currentUser)
-                        showHome(task.result?.user?.email?:"Este Email No existe", ProviderType.BASIC)
-                    }else{
-                        showAlert()
+        if( validateEmail() && validateUserName() && validatePassword()){
+            val progressDialog = ProgressDialog(this)
+            progressDialog.setTitle("Creando cuenta")
+            progressDialog.setMessage("Espera un momento, esto puede tardar unos minutos")
+            progressDialog.setCanceledOnTouchOutside(false)
+            progressDialog.show()
+
+            //Vars Auth
+            val mAuth : FirebaseAuth = FirebaseAuth.getInstance()
+            mAuth.createUserWithEmailAndPassword(textEmail.toString(), textPass.toString())
+                .addOnCompleteListener{task ->
+                    if (task.isSuccessful)
+                    {
+                        saveUserInfo(textUserName.toString(), textEmail.toString(), progressDialog)
+                    }
+                    else
+                    {
+                        val message = task.exception!!.toString()
+                        Toast.makeText(this,"Error: $message", Toast.LENGTH_LONG)
+                        mAuth.signOut()
+                        progressDialog.dismiss()
                     }
                 }
         }
 
     }
 
+    private fun saveUserInfo(userName: String, email: String, progressDialog: ProgressDialog) {
+        val currentUserID = FirebaseAuth.getInstance().currentUser!!.uid
+        val usersRef : DatabaseReference = FirebaseDatabase.getInstance().reference.child("Users")
+        val userMap = HashMap<String,Any>()
+        userMap["uid"] = currentUserID
+        userMap["userName"] = userName
+        userMap["email"] = email
+        userMap["bio"] = "Cuenta creada"
 
-    private fun updateUserInfo(textUserName: TextInputLayout?, imageUri: Uri?, currentUser: FirebaseUser?) {
-//        var mStorage:StorageReference? = FirebaseStorage.getInstance().reference.child("user_photos")
-//        var imageFilePath:StorageReference? = mStorage?.child(imageUri?.lastPathSegment.toString())
-//
-//
-//        if (imageUri != null) {
-//            imageFilePath?.putFile(imageUri)?.addOnSuccessListener {
-//                imageFilePath.downloadUrl.addOnSuccessListener {
-//                    var  profileUpdate: UserProfileChangeRequest? = new UserProfileChangeRequest.Builder().setDisplayName(
-//                        textUserName.toString()
-//                    ).setUri(uri)
-//                        .build()
-//                }
-//
-//            }
-//        }
+        usersRef.child(currentUserID).setValue(userMap)
+            .addOnCompleteListener{task ->
+                if (task.isSuccessful)
+                {
+                    progressDialog.dismiss()
+                    Toast.makeText(this, "Cuenta creada con exito", Toast.LENGTH_LONG)
+                    val intent = Intent(this, HomePageActivity::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+                    startActivity(intent)
+                    finish()
+                }
+                else
+                {
+                    val message = task.exception!!.toString()
+                    Toast.makeText(this,"Error: $message", Toast.LENGTH_LONG)
+                    FirebaseAuth.getInstance().signOut()
+                    progressDialog.dismiss()
+                }
+            }
 
     }
 
@@ -154,27 +175,7 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    private fun uploadImageAndSave() {
-//        val baos = ByteArrayOutputStream()
-//        val storageRef = FirebaseStorage.getInstance()
-//            .reference.child("pics/${FirebaseAuth.getInstance().currentUser?.uid}")
-//
-//        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
-//        val image = baos.toByteArray()
-//        val upload = storageRef.putBytes(image)
-//
-//        upload.addOnCompleteListener{ uploadTask ->
-//            if(uploadTask.isSuccessful){
-//                storageRef.downloadUrl.addOnCompleteListener { urlTask ->
-//                    urlTask.result?.let{
-//                        imageUri = it
-//                        image_new_user_photo.setImageBitmap(bitmap)
-//                    }
-//                }
-//            }
-//
-//        }
-    }
+
 
     private fun validateEmail(): Boolean {
         val emailInput: String = textEmail?.getEditText()?.getText().toString().trim()

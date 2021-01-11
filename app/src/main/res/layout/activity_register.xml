@@ -7,41 +7,18 @@
     android:background="@drawable/background"
     tools:context=".RegisterActivity">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/image_new_user_photo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="122dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/user"
+        app:civ_border_color="@color/White"
+        app:civ_border_width="1dp"
+        app:civ_circle_background_color="#03C1AA"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_go_to_register"
-        app:srcCompat="@drawable/add_image_profile" />
-
-    <ImageView
-        android:id="@+id/image_logo"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="@+id/text_go_to_register"
-        app:layout_constraintEnd_toStartOf="@+id/text_go_to_register"
-        app:layout_constraintTop_toTopOf="@+id/text_go_to_register"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/logo" />
-
-    <TextView
-        android:id="@+id/text_go_to_register"
-        android:layout_width="190dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="sans-serif-condensed"
-        android:gravity="center"
-        android:text="@string/register"
-        android:textColor="@color/Black"
-        android:textSize="38sp"
-        app:layout_constraintEnd_toEndOf="@+id/image_new_user_photo"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/image_new_user_photo"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -50,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         app:errorEnabled="true"
@@ -85,6 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         app:counterEnabled="true"
@@ -121,6 +99,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         app:errorEnabled="true"
@@ -154,6 +133,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         app:errorEnabled="true"
@@ -184,6 +164,7 @@
         android:id="@+id/check_box_accept_conditions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-condensed"
         android:text="@string/acepto_los_terminos_y_condiciones"
         android:textColor="@color/Black"
@@ -196,7 +177,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:background="@drawable/button_sign_up"
@@ -208,6 +189,17 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/check_box_accept_conditions" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_user_new_foto_camera"
+        android:layout_width="32dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="84dp"
+        android:src="@drawable/icon_camera"
+        app:civ_border_color="@color/White"
+        app:civ_border_width="1dp"
+        app:layout_constraintEnd_toEndOf="@+id/image_new_user_photo"
+        app:layout_constraintTop_toTopOf="@+id/image_new_user_photo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
