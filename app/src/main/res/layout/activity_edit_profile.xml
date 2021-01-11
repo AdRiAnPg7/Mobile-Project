@@ -72,6 +72,18 @@
                 app:layout_constraintTop_toBottomOf="@+id/image_user_profile" />
 
             <EditText
+                android:id="@+id/edit_username_field"
+                android:layout_width="283dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:hint="Nombre de Usuario"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/change_proffile_image_button" />
+
+            <EditText
                 android:id="@+id/edit_city_field"
                 android:layout_width="283dp"
                 android:layout_height="wrap_content"
@@ -82,7 +94,7 @@
                 android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+                app:layout_constraintTop_toBottomOf="@+id/edit_username_field" />
 
             <EditText
                 android:id="@+id/edit_country_field"
@@ -97,17 +109,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/edit_city_field" />
 
-            <EditText
-                android:id="@+id/editTextTextPersonName2"
-                android:layout_width="283dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:ems="10"
-                android:hint="Nombre de Usuario"
-                android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/change_proffile_image_button" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
@@ -149,7 +150,7 @@
         app:srcCompat="@drawable/icon_mail_24" />
 
     <EditText
-        android:id="@+id/edit_cellphone_number"
+        android:id="@+id/edit_cellphone_number_field"
         android:layout_width="283dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -157,12 +158,12 @@
         android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="@string/edit_cellphone_number"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         app:layout_constraintStart_toEndOf="@+id/imageView7"
         app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
     <EditText
-        android:id="@+id/edit_email"
+        android:id="@+id/edit_email_field"
         android:layout_width="283dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -172,7 +173,9 @@
         android:hint="@string/edit_email"
         android:inputType="textPersonName"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toBottomOf="@+id/edit_cellphone_number" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_cellphone_number_field" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
