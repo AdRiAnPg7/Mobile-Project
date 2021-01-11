@@ -89,15 +89,18 @@ class CreateLostPetPostActivity : AppCompatActivity() {
                         val postMap = HashMap<String, Any>()
                         postMap["postId"] = postId!!
                         postMap["title"] = text_input_lost_pet_post_tittle.text.toString()
+                        postMap["postImage"] = myUrl
+                        postMap["postDate"] = input_create_lost_pet_post_lastSeen.text.toString()
                         postMap["petName"] = input_create_lost_pet_post_name.text.toString()
                         postMap["petSpecies"] = input_create_lost_pet_post_species.text.toString()
                         postMap["petRace"] = input_create_lost_pet_post_race.text.toString()
                         postMap["petColor"] = input_create_lost_pet_post_color.text.toString()
-                        postMap["postDate"] = input_create_lost_pet_post_lastSeen.text.toString()
                         postMap["phoneNumber"] = input_create_lost_pet_post_phoneNumber.text.toString()
                         postMap["postDescription"] = input_create_lost_pet_post_descripion.text.toString()
-                        //postMap["publisher"] = FirebaseAuth.getInstance().currentUser!!.uid
-                        postMap["postImage"] = myUrl
+                        //postMap["postPublisher"] = FirebaseAuth.getInstance().currentUser!!.uid
+                        postMap["postPublisher"] = "aPublisher"
+                        postMap["postUserImage"] = "https://static.wikia.nocookie.net/villainstournament/images/e/e1/Jack_Frost.jpg/revision/latest?cb=20170609184742.jpg"
+                        postMap["postUserName"] = "aFrost"
 
                         ref.child(postId).updateChildren(postMap)
 
