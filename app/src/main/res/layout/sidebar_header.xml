@@ -15,16 +15,22 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="20dp">
+            >
 
-            <ImageView
+
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/header_profile_picture"
-                android:layout_width="105dp"
-                android:layout_height="93dp"
-                android:layout_marginTop="16dp"
-                app:layout_constraintStart_toStartOf="@+id/guideline19"
-                app:layout_constraintTop_toBottomOf="@+id/image_logo_side_bar"
-                app:srcCompat="@drawable/ic_launcher_foreground" />
+                android:layout_width="188dp"
+                android:layout_height="153dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/image_profile"
+                android:src="@drawable/user"
+                app:civ_border_color="@color/White"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toEndOf="@+id/image_logo_side_bar"
+                app:layout_constraintHorizontal_bias="0.679"
+                app:layout_constraintStart_toStartOf="@+id/image_logo_title_side_bar"
+                app:layout_constraintTop_toBottomOf="@+id/image_logo_title_side_bar" />
 
             <TextView
                 android:id="@+id/header_username_text"
@@ -32,7 +38,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="TextView"
-                app:layout_constraintStart_toStartOf="@+id/guideline19"
+                android:textColor="@color/Black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/header_profile_picture"
+                app:layout_constraintStart_toStartOf="@+id/header_profile_picture"
                 app:layout_constraintTop_toBottomOf="@+id/header_profile_picture" />
 
             <TextView
@@ -41,8 +50,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="TextView"
-                app:layout_constraintStart_toStartOf="@+id/guideline19"
+                android:textColor="@color/Black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/header_username_text"
+                app:layout_constraintStart_toStartOf="@+id/header_username_text"
                 app:layout_constraintTop_toBottomOf="@+id/header_username_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/Gray"
+                app:layout_constraintEnd_toEndOf="@+id/image_logo_side_bar"
+                app:layout_constraintHorizontal_bias="0.19"
+                app:layout_constraintStart_toStartOf="@+id/image_logo_title_side_bar"
+                app:layout_constraintTop_toBottomOf="@+id/header_email_text"></View>
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline19"

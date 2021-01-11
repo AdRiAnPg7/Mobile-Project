@@ -98,6 +98,9 @@ class RegisterActivity : AppCompatActivity() {
         userMap["uid"] = currentUserID
         userMap["email"] = new_Email
         userMap["user"] = new_UserName
+        userMap["cellphone"] = ""
+        userMap["city"] = ""
+        userMap["country"] = ""
         userMap["image"] = "https://firebasestorage.googleapis.com/v0/b/foundmypet-b1dae.appspot.com/o/Default%20Images%2Fprofile.png?alt=media&token=d65da2f2-1287-4d42-9b12-eeeb2646289a"
 
         userRef.child(currentUserID).setValue(userMap)

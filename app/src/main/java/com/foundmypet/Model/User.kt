@@ -5,6 +5,9 @@ class User {
     private var image: String = ""
     private var uid: String = ""
     private var user: String = ""
+    private var cellphone: String = ""
+    private var city : String = ""
+    private var country : String = ""
 
     constructor()
 
@@ -44,5 +47,15 @@ class User {
 
     fun setUid(newUid:String){
         this.uid = newUid
+    }
+
+    fun getCellphone(): String{
+        return cellphone
+    }
+    fun getCountry(): String{
+        return country
+    }
+    fun getCity(): String{
+        return city
     }
 }

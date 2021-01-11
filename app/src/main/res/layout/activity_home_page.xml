@@ -89,5 +89,6 @@
         android:outlineAmbientShadowColor="@color/White"
         android:outlineSpotShadowColor="@color/White"
         app:headerLayout="@layout/sidebar_header"
-        app:menu="@menu/sidebar_main_menu" />
+        app:menu="@menu/sidebar_main_menu"
+        />
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -7,8 +7,8 @@
         android:title="@string/sidebar_menu_string" />
     <item
         android:id="@+id/sidebar_edit_post_item"
-        android:icon="@drawable/edit_icon"
-        android:title="@string/sidebar_edit_post_string"
+        android:icon="@drawable/ic_account"
+        android:title="@string/sidebar_profile_string"
         />
 
     <item

@@ -72,10 +72,10 @@ class EditProfileActivity : AppCompatActivity() {
                 if (snapshot.exists()){
                     val user = snapshot.getValue<User>(User::class.java)
                     Picasso.get().load(user!!.getImage()).placeholder(R.drawable.add_image_profile).into(image_user_profile)
-                    //edit_city_field.setText(user!!.getCity())
-                    //edit_country_field.setText(user!!.getCountry())
+                    edit_city_field.setText(user!!.getCity())
+                    edit_country_field.setText(user!!.getCountry())
                     edit_username_field.setText(user!!.getUser())
-                    //edit_cellphone_number.setText(user!!.getCellphone())
+                    edit_cellphone_number_field.setText(user!!.getCellphone())
                     edit_email_field.setText(user!!.getEmail())
                 }
             }

@@ -22,9 +22,8 @@ import kotlinx.android.synthetic.main.activity_user_profile.image_user_profile
 
 class UserProfileActivity : AppCompatActivity() {
 
-    // user vars
+    // User vars
     private lateinit var firebaseUser: FirebaseUser
-    private var storageProfilePicRef: StorageReference? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +31,6 @@ class UserProfileActivity : AppCompatActivity() {
 
         // user
         firebaseUser = FirebaseAuth.getInstance().currentUser!!
-        storageProfilePicRef = FirebaseStorage.getInstance().reference.child("Profile Pictures")
 
         // get Data
         getUserData()
@@ -53,7 +51,7 @@ class UserProfileActivity : AppCompatActivity() {
     }
 
     private fun getUserData() {
-        val currentUser = FirebaseDatabase.getInstance().getReference().child("Users").child(firebaseUser.uid)
+        val currentUser = FirebaseDatabase.getInstance().reference.child("Users").child(firebaseUser.uid)
         currentUser.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                if(snapshot.exists()){
@@ -61,6 +59,9 @@ class UserProfileActivity : AppCompatActivity() {
                    Picasso.get().load(user!!.getImage()).into(image_user_profile)
                    profile_user_name.text = user!!.getUser()
                    email_user.text = user!!.getEmail()
+                   cellphone_user.text = user!!.getCellphone()
+                   profile_user_department.text = user!!.getCity()
+                   profile_user_country.text = user!!.getCountry()
                }
             }
 
