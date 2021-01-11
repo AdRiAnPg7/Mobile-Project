@@ -99,8 +99,8 @@ class CreateLostPetPostActivity : AppCompatActivity() {
                         postMap["postDescription"] = input_create_lost_pet_post_descripion.text.toString()
                         //postMap["postPublisher"] = FirebaseAuth.getInstance().currentUser!!.uid
                         postMap["postPublisher"] = "aPublisher"
-                        postMap["postUserImage"] = "https://static.wikia.nocookie.net/villainstournament/images/e/e1/Jack_Frost.jpg/revision/latest?cb=20170609184742.jpg"
-                        postMap["postUserName"] = "aFrost"
+                        postMap["postUserImage"] = "https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/07/25/Recortada/img_econcejo_20180730-165058_imagenes_lv_terceros_istock-894361286-k0hH--656x438@LaVanguardia-Web.jpg"
+                        postMap["postUserName"] = "Persona A"
 
                         ref.child(postId).updateChildren(postMap)
 

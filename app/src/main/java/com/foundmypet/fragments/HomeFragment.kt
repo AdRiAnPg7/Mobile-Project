@@ -46,14 +46,14 @@ class HomeFragment : Fragment() {
         recyclerViewMain.layoutManager = layoutManager
 
         //CASO DE USO FIREBASE
-        //postList.clear()
-        //setupRecyclerView(recyclerViewMain)
+        postList.clear()
+        setupRecyclerView(recyclerViewMain)
 
         //CASO DE USO
-        val usesCases = GetPosts(PostsRepository(PostLocalData()))
-        mainViewModel = MainViewModel(usesCases)
-        mainViewModel.model.observe(this, Observer(::upadateUi))
-        mainViewModel.loadPosts()
+//        val usesCases = GetPosts(PostsRepository(PostLocalData()))
+//        mainViewModel = MainViewModel(usesCases)
+//        mainViewModel.model.observe(this, Observer(::upadateUi))
+//        mainViewModel.loadPosts()
     }
 
     private fun setupRecyclerView(recyclerViewMain: RecyclerView) {
