@@ -50,6 +50,13 @@ class CreateLostPetPostActivity : AppCompatActivity() {
         when{
             imageUri == null -> Toast.makeText(this,"Please select image first.",Toast.LENGTH_LONG).show()
             TextUtils.isEmpty(text_input_lost_pet_post_tittle.text.toString()) -> Toast.makeText(this, "Please write a title for the Post", Toast.LENGTH_LONG).show()
+            TextUtils.isEmpty(input_create_lost_pet_post_name.text.toString()) -> Toast.makeText(this, "Please write the name of the pet for the Post", Toast.LENGTH_SHORT).show()
+            TextUtils.isEmpty(input_create_lost_pet_post_species.text.toString()) -> Toast.makeText(this, "Please write the species for the Post", Toast.LENGTH_SHORT).show()
+            TextUtils.isEmpty(input_create_lost_pet_post_race.text.toString()) -> Toast.makeText(this, "Please write the race for the Post", Toast.LENGTH_SHORT).show()
+            TextUtils.isEmpty(input_create_lost_pet_post_color.text.toString()) -> Toast.makeText(this, "Please write the color for the Post", Toast.LENGTH_SHORT).show()
+            TextUtils.isEmpty(input_create_lost_pet_post_lastSeen.text.toString()) -> Toast.makeText(this, "Please write the date for the Post", Toast.LENGTH_SHORT).show()
+            TextUtils.isEmpty(input_create_lost_pet_post_phoneNumber.text.toString()) -> Toast.makeText(this, "Please write the phone number for the Post", Toast.LENGTH_SHORT).show()
+            TextUtils.isEmpty(input_create_lost_pet_post_descripion.text.toString()) -> Toast.makeText(this, "Please write the description for the Post", Toast.LENGTH_SHORT).show()
 
             else -> {
                 val progressDialog = ProgressDialog(this)
@@ -71,7 +78,7 @@ class CreateLostPetPostActivity : AppCompatActivity() {
                         }
                     }
                     return@Continuation fileRef.downloadUrl
-                }).addOnCompleteListener { OnCompleteListener<Uri> { task ->
+                }).addOnCompleteListener (OnCompleteListener<Uri> { task ->
                     if (task.isSuccessful) {
                         val dowloadUrl = task.result
                         myUrl = dowloadUrl.toString()
@@ -81,28 +88,33 @@ class CreateLostPetPostActivity : AppCompatActivity() {
 
                         val postMap = HashMap<String, Any>()
                         postMap["postId"] = postId!!
-                        postMap["title"] = text_input_lost_pet_post_tittle.text.toString().toLowerCase()
+                        postMap["title"] = text_input_lost_pet_post_tittle.text.toString()
+                        postMap["petName"] = input_create_lost_pet_post_name.text.toString()
+                        postMap["petSpecies"] = input_create_lost_pet_post_species.text.toString()
+                        postMap["petRace"] = input_create_lost_pet_post_race.text.toString()
+                        postMap["petColor"] = input_create_lost_pet_post_color.text.toString()
+                        postMap["postDate"] = input_create_lost_pet_post_lastSeen.text.toString()
+                        postMap["phoneNumber"] = input_create_lost_pet_post_phoneNumber.text.toString()
+                        postMap["postDescription"] = input_create_lost_pet_post_descripion.text.toString()
                         //postMap["publisher"] = FirebaseAuth.getInstance().currentUser!!.uid
                         postMap["postImage"] = myUrl
 
                         ref.child(postId).updateChildren(postMap)
+
                         Toast.makeText(this,"Post uploaded successfully", Toast.LENGTH_LONG).show()
+
                         val intent = Intent (this@CreateLostPetPostActivity, HomePageActivity::class.java)
                         startActivity(intent)
                         finish()
+
                         progressDialog.dismiss()
                     }
                     else{
                         progressDialog.dismiss()
                     }
-                } }
+                } )
             }
         }
-    }
-
-    fun savePost(){
-    }
-    fun clearTexts(){
     }
 }
 
