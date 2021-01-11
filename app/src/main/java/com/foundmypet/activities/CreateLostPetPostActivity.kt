@@ -89,15 +89,18 @@ class CreateLostPetPostActivity : AppCompatActivity() {
                         val postMap = HashMap<String, Any>()
                         postMap["postId"] = postId!!
                         postMap["title"] = text_input_lost_pet_post_tittle.text.toString()
+                        postMap["postImage"] = myUrl
+                        postMap["postDate"] = input_create_lost_pet_post_lastSeen.text.toString()
                         postMap["petName"] = input_create_lost_pet_post_name.text.toString()
                         postMap["petSpecies"] = input_create_lost_pet_post_species.text.toString()
                         postMap["petRace"] = input_create_lost_pet_post_race.text.toString()
                         postMap["petColor"] = input_create_lost_pet_post_color.text.toString()
-                        postMap["postDate"] = input_create_lost_pet_post_lastSeen.text.toString()
                         postMap["phoneNumber"] = input_create_lost_pet_post_phoneNumber.text.toString()
                         postMap["postDescription"] = input_create_lost_pet_post_descripion.text.toString()
-                        //postMap["publisher"] = FirebaseAuth.getInstance().currentUser!!.uid
-                        postMap["postImage"] = myUrl
+                        //postMap["postPublisher"] = FirebaseAuth.getInstance().currentUser!!.uid
+                        postMap["postPublisher"] = "aPublisher"
+                        postMap["postUserImage"] = "https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/07/25/Recortada/img_econcejo_20180730-165058_imagenes_lv_terceros_istock-894361286-k0hH--656x438@LaVanguardia-Web.jpg"
+                        postMap["postUserName"] = "Persona A"
 
                         ref.child(postId).updateChildren(postMap)
 
