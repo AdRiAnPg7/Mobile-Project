@@ -3,9 +3,16 @@ package com.foundmypet
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
+import com.foundmypet.Model.User
 import com.foundmypet.R
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.squareup.picasso.Picasso
+import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.activity_post_page.*
 
 class PostPageActivity : AppCompatActivity() {
@@ -16,8 +23,6 @@ class PostPageActivity : AppCompatActivity() {
         //DATA INTENT - DATA EXTRA
         val postTittle = intent.getStringExtra("iPostTittle")
         val postImage = intent.getStringExtra("iPostImage")
-        val postUserImage = intent.getStringExtra("iPostUserImage")
-        val postUserName = intent.getStringExtra("iPostUserName")
         val postDate = intent.getStringExtra("iPostDate")
         val petName = intent.getStringExtra("iPetName")
         val petSpecies = intent.getStringExtra("iPetSpecies")
@@ -25,6 +30,8 @@ class PostPageActivity : AppCompatActivity() {
         val petColor = intent.getStringExtra("iPetColor")
         val phoneNumber = intent.getStringExtra("iPhoneNumber")
         val postDescription = intent.getStringExtra("iPostDescription")
+
+        val postPublisher:String = intent.getStringExtra("iPostPublisher").toString()
 
         text_title_looking_dog.text = postTittle
         Picasso.get().load(postImage).into(image_post_page)
@@ -36,7 +43,24 @@ class PostPageActivity : AppCompatActivity() {
         text_number_contact_post_page.text = phoneNumber
         text_description_post_page.text = postDescription
 
-        Picasso.get().load(postUserImage).into(image_user_profile_post_page)
-        text_user_name_post_page.text = postUserName
+        publisherInfo(postPublisher)
+    }
+
+    private fun publisherInfo(postPublisher: String) {
+        val usersRef = FirebaseDatabase.getInstance().reference.child("Users").child(postPublisher)
+
+        usersRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()){
+                    val user = snapshot.getValue<User>(User::class.java)
+                    Picasso.get().load(user!!.getImage()).into(image_user_profile_post_page)
+                    text_user_name_post_page.text = user.getUser()
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        })
     }
 }

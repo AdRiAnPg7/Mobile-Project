@@ -73,9 +73,7 @@ class HomeFragment : Fragment() {
                             child.child("petColor").getValue<String>(),
                             child.child("phoneNumber").getValue<String>(),
                             child.child("postDescription").getValue<String>(),
-                            child.child("postPublisher").getValue<String>(),
-                            child.child("postUserImage").getValue<String>(),
-                            child.child("postUserName").getValue<String>())
+                            child.child("postPublisher").getValue<String>())
                     //val post = snapshot.getValue(Post::class.java)
                     post?.let { postList.add(it) }
                 }

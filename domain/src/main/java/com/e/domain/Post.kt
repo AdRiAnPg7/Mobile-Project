@@ -10,6 +10,4 @@ data class Post(val postTittle :String? = "",
                 val petColor:String? = "",
                 val phoneNumber:String? = "",
                 val postDescription:String? = "",
-                val postPublisher:String? = "",
-                val postUserImage:String? = "",
-                val postUserName:String? = "")
+                val postPublisher:String? = "")

@@ -28,16 +28,14 @@ class PostListAdapter(private val list: List<Post>): RecyclerView.Adapter<PostLi
             view.descriptionTextView.text = post.postDescription
             view.commentAntiquityTextView.text = post.postDate
 
-            //publisherInfo(view.userImageView, view.usernameTextView, post.postPublisher)
-            Picasso.get().load(post.postUserImage).into(view.userImageView)
-            view.usernameTextView.text = post.postUserName
+            publisherInfo(view.userImageView, view.usernameTextView, post.postPublisher.toString())
+            //Picasso.get().load(post.postUserImage).into(view.userImageView)
+            //view.usernameTextView.text = post.postUserName
 
             view.setOnClickListener {
                 val intent = Intent(view.context,PostPageActivity::class.java)
                 intent.putExtra("iPostTittle", post.postTittle)
                 intent.putExtra("iPostImage", post.postImage)
-                intent.putExtra("iPostUserImage", post.postUserImage)
-                intent.putExtra("iPostUserName", post.postUserName)
                 intent.putExtra("iPostDate", post.postDate)
                 intent.putExtra("iPetName", post.petName)
                 intent.putExtra("iPetSpecies", post.petSpecies)
@@ -45,6 +43,7 @@ class PostListAdapter(private val list: List<Post>): RecyclerView.Adapter<PostLi
                 intent.putExtra("iPetColor", post.petColor)
                 intent.putExtra("iPhoneNumber", post.phoneNumber)
                 intent.putExtra("iPostDescription", post.postDescription)
+                intent.putExtra("iPostPublisher", post.postPublisher)
                 view.context.startActivity(intent)
             }
         }
@@ -57,7 +56,7 @@ class PostListAdapter(private val list: List<Post>): RecyclerView.Adapter<PostLi
                     if (snapshot.exists()){
                         val user = snapshot.getValue<User>(User::class.java)
                         Picasso.get().load(user!!.getImage()).into(userImageView)
-                        usernameTextView.text = user!!.getUser()
+                        usernameTextView.text = user.getUser()
                     }
                 }
 
