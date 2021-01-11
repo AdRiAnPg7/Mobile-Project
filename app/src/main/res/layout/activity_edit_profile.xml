@@ -80,8 +80,9 @@
                 android:hint="@string/edit_city_field"
                 android:inputType="textPersonName"
                 android:textColor="#FFFFFF"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
-                tools:layout_editor_absoluteX="63dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
             <EditText
                 android:id="@+id/edit_country_field"
@@ -92,8 +93,9 @@
                 android:hint="@string/edit_country_field"
                 android:inputType="textPersonName"
                 android:textColor="#FFFFFF"
-                app:layout_constraintTop_toBottomOf="@+id/edit_city_field"
-                tools:layout_editor_absoluteX="63dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_city_field" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName2"
@@ -103,8 +105,9 @@
                 android:ems="10"
                 android:hint="Nombre de Usuario"
                 android:inputType="textPersonName"
-                app:layout_constraintTop_toBottomOf="@+id/change_proffile_image_button"
-                tools:layout_editor_absoluteX="63dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/change_proffile_image_button" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
