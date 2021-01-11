@@ -9,13 +9,35 @@ import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_user_profile.*
 import java.lang.StringBuilder
 import android.widget.ImageButton
+import com.foundmypet.Model.User
 import com.foundmypet.activities.EditProfileActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_edit_profile.*
+import kotlinx.android.synthetic.main.activity_user_profile.image_user_profile
 
 class UserProfileActivity : AppCompatActivity() {
+
+    // user vars
+    private lateinit var firebaseUser: FirebaseUser
+    private var storageProfilePicRef: StorageReference? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_profile)
 
+        // user
+        firebaseUser = FirebaseAuth.getInstance().currentUser!!
+        storageProfilePicRef = FirebaseStorage.getInstance().reference.child("Profile Pictures")
+
+        // get Data
+        getUserData()
+
+        // routing
         val editProfile = findViewById<ImageButton>(R.id.button_confirm_profile_edit)
 
         editProfile.setOnClickListener{
@@ -30,18 +52,22 @@ class UserProfileActivity : AppCompatActivity() {
 
     }
 
-    var getData = object :ValueEventListener{
-        override fun onCancelled(error: DatabaseError) {
-        }
-
-        override fun onDataChange(snapshot: DataSnapshot) {
-            var currentUserName = StringBuilder()
-            for(i in snapshot.children)
-            {
-                var name1 = i.child("Users").getValue()
-                currentUserName = name1 as StringBuilder
+    private fun getUserData() {
+        val currentUser = FirebaseDatabase.getInstance().getReference().child("Users").child(firebaseUser.uid)
+        currentUser.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+               if(snapshot.exists()){
+                   val user = snapshot.getValue<User>(User::class.java)
+                   Picasso.get().load(user!!.getImage()).into(image_user_profile)
+                   profile_user_name.text = user!!.getUser()
+                   email_user.text = user!!.getEmail()
+               }
             }
-            profile_user_name.text = currentUserName.toString()
-        }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        })
     }
+
 }

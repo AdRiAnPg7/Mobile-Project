@@ -45,6 +45,7 @@ class EditProfileActivity : AppCompatActivity() {
         storageProfilePicRef = FirebaseStorage.getInstance().reference.child("Profile Pictures")
 
         userInfo()
+
         change_proffile_image_button.setOnClickListener{
             checker = "clicked"
             CropImage.activity()
