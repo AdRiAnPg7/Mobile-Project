@@ -45,7 +45,7 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
     //FIREBASE DEPENDENCIES - DATABASE
     implementation platform('com.google.firebase:firebase-bom:25.12.0')
     implementation 'com.google.firebase:firebase-auth:20.0.1'

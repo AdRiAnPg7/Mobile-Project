@@ -83,7 +83,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/profile_user_name" />
 
             <ImageButton
-                android:id="@+id/button_exit_profile"
+                android:id="@+id/button_cancel_edit_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -95,7 +95,7 @@
                 app:srcCompat="@drawable/icon_left_arrow" />
 
             <ImageButton
-                android:id="@+id/button_edit_profile"
+                android:id="@+id/button_confirm_profile_edit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"

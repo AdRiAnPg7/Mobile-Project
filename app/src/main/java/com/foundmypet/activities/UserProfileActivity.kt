@@ -8,7 +8,6 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_user_profile.*
 import java.lang.StringBuilder
-import android.widget.Button
 import android.widget.ImageButton
 import com.foundmypet.activities.EditProfileActivity
 
@@ -17,13 +16,13 @@ class UserProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_profile)
 
-        val editProfile = findViewById<ImageButton>(R.id.button_edit_profile)
+        val editProfile = findViewById<ImageButton>(R.id.button_confirm_profile_edit)
 
         editProfile.setOnClickListener{
             startActivity(Intent(this,EditProfileActivity::class.java))
         }
 
-        val exitProfile = findViewById<ImageButton>(R.id.button_exit_profile)
+        val exitProfile = findViewById<ImageButton>(R.id.button_cancel_edit_profile)
 
         exitProfile.setOnClickListener{
             this.finish()
