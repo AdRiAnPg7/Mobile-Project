@@ -97,8 +97,8 @@ class CreateLostPetPostActivity : AppCompatActivity() {
                         postMap["petColor"] = input_create_lost_pet_post_color.text.toString()
                         postMap["phoneNumber"] = input_create_lost_pet_post_phoneNumber.text.toString()
                         postMap["postDescription"] = input_create_lost_pet_post_descripion.text.toString()
-                        //postMap["postPublisher"] = FirebaseAuth.getInstance().currentUser!!.uid
-                        postMap["postPublisher"] = "aPublisher"
+                        postMap["postPublisher"] = FirebaseAuth.getInstance().currentUser!!.uid
+                        //postMap["postPublisher"] = "aPublisher"
                         postMap["postUserImage"] = "https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/07/25/Recortada/img_econcejo_20180730-165058_imagenes_lv_terceros_istock-894361286-k0hH--656x438@LaVanguardia-Web.jpg"
                         postMap["postUserName"] = "Persona A"
 
