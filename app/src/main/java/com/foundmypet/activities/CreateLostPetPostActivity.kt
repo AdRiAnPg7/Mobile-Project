@@ -32,7 +32,7 @@ class CreateLostPetPostActivity : AppCompatActivity() {
         storagePostPicRef = FirebaseStorage.getInstance().reference.child("Posts Pictures")
         btn_create_post.setOnClickListener { uploadImage() }
         CropImage.activity()
-            .setAspectRatio(2,1)
+            .setAspectRatio(1,1)
             .start(this@CreateLostPetPostActivity)
     }
 
