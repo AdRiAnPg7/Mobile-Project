@@ -2,20 +2,20 @@
     <string name="app_name">FoundMyPet</string>
     <string name="login">Ingresar</string>
     <string name="register">Registrarse</string>
-    <string name="title_email">Correo:</string>
-    <string name="title_user_name">UserName</string>
+    <string name="title_email">Correo</string>
+    <string name="title_user_name">Nombre de Usuario</string>
     <string name="password">Contraseña</string>
     <string name="confirm">Confirmar</string>
     <string name="confirmPassword">Confirmar Contraseña</string>
-    <string name="title_user_profile">User Profile</string>
+    <string name="title_user_profile">Perfil de Usuario</string>
     <string name="profile_name">Carla</string>
     <string name="title_location">COCHABAMBA, BOLIVIA</string>
     <string name="title_contact">Contacto:</string>
     <string name="title_cellphone">Telefono:</string>
     <string name="title_cellphone_number">+591 70859812</string>
-    <string name="title_email_address">Carla_Almanza_Alcocer@gmail.com</string>
-    <string name="image_profile">Profile Image</string>
-    <string name="edit_profile">Edit Profile</string>
+    <string name="title_email_address">Carla_Gonzales_Rocabado@gmail.com</string>
+    <string name="image_profile">Imagen de Perfil</string>
+    <string name="edit_profile">Editar Perfil</string>
     <string name="create_post">Aceptar</string>
 
     <string name="create_lostPet_post_tittle_hint">Titulo de la publicacion</string>
@@ -47,7 +47,7 @@
     <string name="title_last_seen_address_post_page">Av. Blanco Galindo km 6</string>
     <string name="title_number_contact_post_page">Numero de contacto(s):</string>
     <string name="title_number_contact_of_user_post_page">75822674 - 4434513</string>
-    <string name="title_description_post_page">Description:</string>
+    <string name="title_description_post_page">Descripcion:</string>
     <string name="title_description_place_post_page">Salio de mi casa por la 6 de agosto...</string>
 
 
@@ -71,12 +71,12 @@
     <string name="btn_label_lost_pet_create_type_post">¿Perdiste una mascota?</string>
     <string name="title_species_name_post_page">Especie:</string>
     <string name="species_name_post_page">Perro</string>
-    <string name="Image">image</string>
+    <string name="Image">Imagen</string>
     <string name="create_lostPet_post_description_label">Descripcion:</string>
     <string name="profile_user_name">-</string>
-    <string name="profile_user_department">CityName</string>
+    <string name="profile_user_department">Ciudad</string>
     <string name="profile_location_symbol">|</string>
-    <string name="profile_user_country">CountryName</string>
+    <string name="profile_user_country">Pais</string>
     <string name="profile_separation_symbol"> | </string>
     <string name="change_profile_image">Cambiar Foto</string>
     <string name="edit_city_field">Ciudad</string>
