@@ -10,7 +10,7 @@
     tools:context=".HomePageActivity"
     android:layoutDirection="rtl"
     tools:openDrawer="start"
-    android:background="@drawable/background">
+    android:background="@color/Background">
 
 
 

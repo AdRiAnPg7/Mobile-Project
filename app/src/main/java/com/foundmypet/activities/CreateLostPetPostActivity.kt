@@ -60,8 +60,8 @@ class CreateLostPetPostActivity : AppCompatActivity() {
 
             else -> {
                 val progressDialog = ProgressDialog(this)
-                progressDialog.setTitle("Adding New Post")
-                progressDialog.setMessage("Please wait, we are adding your picture post")
+                progressDialog.setTitle("Publicando")
+                progressDialog.setMessage("Espere un momento por favor")
                 progressDialog.show()
 
                 val fileRef = storagePostPicRef!!.child(System.currentTimeMillis().toString() + ".jpg")

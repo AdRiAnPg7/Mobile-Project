@@ -6,7 +6,7 @@
     android:id="@+id/constrainLayout_1_create_lost_pet_post"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#004d69">
+    android:background="@color/Background">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -63,6 +63,7 @@
                 android:layout_marginRight="24dp"
                 android:background="@drawable/text_view_border"
                 android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
                 android:hint="@string/create_lostPet_post_tittle_hint"
                 android:importantForAutofill="no"
                 android:inputType="text"
