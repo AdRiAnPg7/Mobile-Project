@@ -46,6 +46,10 @@ class EditProfileActivity : AppCompatActivity() {
 
         userInfo()
 
+        button_cancel_edit_profile.setOnClickListener{
+            this.finish()
+        }
+
         change_proffile_image_button.setOnClickListener{
             checker = "clicked"
             CropImage.activity()
