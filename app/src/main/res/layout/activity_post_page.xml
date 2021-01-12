@@ -150,20 +150,6 @@
                         app:layout_constraintTop_toBottomOf="@+id/text_title_name_post_page" />
 
                     <TextView
-                        android:id="@+id/text_time_published_post_page"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginLeft="12dp"
-                        android:text="@string/title_time_published_post_page"
-                        android:textColor="@color/Black"
-                        app:layout_constraintBottom_toBottomOf="@+id/text_user_name_post_page"
-                        app:layout_constraintEnd_toStartOf="@+id/guideline35"
-                        app:layout_constraintStart_toEndOf="@+id/text_user_name_post_page"
-                        app:layout_constraintTop_toTopOf="@+id/text_user_name_post_page"
-                        app:layout_constraintVertical_bias="0.0" />
-
-                    <TextView
                         android:id="@+id/text_title_name_post_page"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -269,44 +255,15 @@
                         app:layout_constraintVertical_bias="0.0" />
 
                     <TextView
-                        android:id="@+id/text_title_last_seen_post_page"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="@string/title_last_seen_post_page"
-                        android:textColor="@color/Black"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="@+id/text_title_date_lost_post_page"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="@+id/guideline33"
-                        app:layout_constraintTop_toBottomOf="@+id/text_title_date_lost_post_page" />
-
-                    <TextView
-                        android:id="@+id/text_last_seen_post_page"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:text="@string/title_last_seen_address_post_page"
-                        android:textColor="@color/Black"
-                        app:layout_constraintBottom_toBottomOf="@+id/text_title_last_seen_post_page"
-                        app:layout_constraintEnd_toStartOf="@+id/guideline35"
-                        app:layout_constraintStart_toEndOf="@+id/text_title_last_seen_post_page"
-                        app:layout_constraintTop_toTopOf="@+id/text_title_last_seen_post_page"
-                        app:layout_constraintVertical_bias="0.0" />
-
-                    <TextView
                         android:id="@+id/text_title_number_contact_post_page"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="8dp"
                         android:text="@string/title_number_contact_post_page"
                         android:textColor="@color/Black"
                         android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="@+id/text_title_last_seen_post_page"
-                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="@+id/guideline33"
-                        app:layout_constraintTop_toBottomOf="@+id/text_title_last_seen_post_page" />
+                        app:layout_constraintTop_toBottomOf="@+id/text_title_date_lost_post_page" />
 
                     <TextView
                         android:id="@+id/text_number_contact_post_page"
@@ -326,7 +283,7 @@
                         android:id="@+id/text_title_description_post_page"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="8dp"
                         android:text="@string/title_description_post_page"
                         android:textColor="@color/Black"
                         android:textStyle="bold"

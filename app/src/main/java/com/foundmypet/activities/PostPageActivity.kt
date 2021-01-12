@@ -35,7 +35,7 @@ class PostPageActivity : AppCompatActivity() {
 
         text_title_looking_dog.text = postTittle
         Picasso.get().load(postImage).into(image_post_page)
-        text_time_published_post_page.text = postDate
+        text_date_lost_post_profile.text = postDate
         text_name_post_page.text = petName
         text_species_post_page.text = petSpecies
         text_breed_post_page.text = petRace
