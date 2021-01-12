@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">FoundMyPet</string>
+    <string name="login">Log In</string>
+    <string name="register">Sign Up</string>
+    <string name="title_email">Mail</string>
+    <string name="title_user_name">Username</string>
+    <string name="password">Password</string>
+    <string name="confirm">Sign up</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="title_user_profile">User Profile</string>
+    <string name="profile_name">Carla</string>
+    <string name="title_location">COCHABAMBA, BOLIVIA</string>
+    <string name="title_contact">Contact:</string>
+    <string name="title_cellphone">Phone:</string>
+    <string name="title_cellphone_number">+591 70859812</string>
+    <string name="title_email_address">Carla_Gonzales_Rocabado@gmail.com</string>
+    <string name="image_profile">Image Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="create_post">Accept</string>
+
+    <string name="create_lostPet_post_tittle_hint">Title</string>
+    <string name="create_lostPet_post_name_label">Name:</string>
+    <string name="create_lostPet_post_race_label">Race:</string>
+    <string name="create_lostPet_post_species_label">Species:</string>
+    <string name="create_lostPet_post_color_label">Color:</string>
+    <string name="create_lostPet_post_lost_date_label">Date of lost:</string>
+    <string name="create_lostPet_post_last_seen_label">Last seen on:</string>
+    <string name="create_lostPet_post_contact_phone_label">Contact number(s):</string>
+    <string name="recuerdame">Remember me</string>
+    <string name="no_tienes_cuenta">Don\'t have an account?</string>
+    <string name="registrate">SIGN UP</string>
+    <string name="todo">TODO</string>
+    <string name="acepto_los_terminos_y_condiciones">AGREE TERMS AND CONDITIONS</string>
+
+    <string name="title_looking_dog">Missing dog</string>
+    <string name="title_user_name_post_page">Augusto Valdez</string>
+    <string name="title_time_published_post_page">4h ago</string>
+    <string name="title_name_pet_post_page">Name: </string>
+    <string name="title_name_pet_lost_post_page">MAX</string>
+    <string name="title_breed_post_page">Race:</string>
+    <string name="title_breed_pet_lost_post_page">Mestizo</string>
+    <string name="title_color_post_page">Colors:</string>
+    <string name="title_color_pet_lost_post_page">Mostaza</string>
+    <string name="title_date_lost_post_page">Date of lost:</string>
+    <string name="title_date_lost_pet_post_page">25 Julio 2020</string>
+    <string name="title_last_seen_post_page">Last seen on:</string>
+    <string name="title_last_seen_address_post_page">Av. Blanco Galindo km 6</string>
+    <string name="title_number_contact_post_page">Contact number(s):</string>
+    <string name="title_number_contact_of_user_post_page">75822674 - 4434513</string>
+    <string name="title_description_post_page">Description:</string>
+    <string name="title_description_place_post_page">Salio de mi casa por la 6 de agosto...</string>
+
+
+    <string name="sidebar_text_menu">Menu</string>
+    <string name="sidebar_menu_string">Home</string>
+    <string name="sidebar_profile_string">Profile</string>
+    <string name="sidebar_lost_pets_string">Lost Pets</string>
+    <string name="sidebar_found_pets_string">Pets Found</string>
+    <string name="sidebar_happy_pets_string">Happy pets</string>
+    <string name="sidebar_configuration_string">Settings</string>
+    <string name="sidebar_end_session_string">Log Out</string>
+    <string name="email">Mail</string>
+
+    <string name="add_nav">Add</string>
+    <string name="home_nav">Home</string>
+    <string name="search_nav">Search</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="btn_label_found_pet_create_type_post">did you find a pet?</string>
+    <string name="btn_label_lost_pet_create_type_post">did you lose a pet?</string>
+    <string name="title_species_name_post_page">Species:</string>
+    <string name="species_name_post_page">Dog</string>
+    <string name="Image">Image</string>
+    <string name="create_lostPet_post_description_label">Description:</string>
+    <string name="profile_user_name">-</string>
+    <string name="profile_user_department">City</string>
+    <string name="profile_location_symbol">|</string>
+    <string name="profile_user_country">Country</string>
+    <string name="profile_separation_symbol"> | </string>
+    <string name="change_profile_image">Change Profile Picture</string>
+    <string name="edit_city_field">City</string>
+    <string name="edit_country_field">Country</string>git
+    <string name="edit_cellphone_number">Phone</string>
+    <string name="edit_email">Mail</string>
+
+</resources>
