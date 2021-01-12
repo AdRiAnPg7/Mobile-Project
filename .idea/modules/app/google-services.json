@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1078924968308",
+    "firebase_url": "https://foundmypet-b1dae.firebaseio.com",
+    "project_id": "foundmypet-b1dae",
+    "storage_bucket": "foundmypet-b1dae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078924968308:android:b26c2315c8c40b17a3ac21",
+        "android_client_info": {
+          "package_name": "com.foundmypet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078924968308-d3bkdae8oatiqetba46d1vr5vqkt4nae.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.foundmypet",
+            "certificate_hash": "eddc0a28e5f40fbe9f078b6efbe7336cf62233b2"
+          }
+        },
+        {
+          "client_id": "1078924968308-i2dhtab3hfuaa7plte3lq0ajgeco0odl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCk8fOOtBKPglTidmHaehldhjNUIG0JRbw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1078924968308-i2dhtab3hfuaa7plte3lq0ajgeco0odl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

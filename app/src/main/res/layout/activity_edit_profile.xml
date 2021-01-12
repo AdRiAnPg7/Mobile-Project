@@ -98,14 +98,16 @@
         android:id="@+id/edit_username_field"
         android:layout_width="283dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="Nombre de Usuario"
         android:inputType="textPersonName"
         android:textColor="#BABABA"
         android:textColorHint="#BABABA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_right_lost_pet_post_layout_1"
         app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
 
@@ -113,38 +115,40 @@
         android:id="@+id/edit_city_field"
         android:layout_width="283dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="@string/edit_city_field"
         android:inputType="textPersonName"
         android:textColor="#BABABA"
         android:textColorHint="#BABABA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_right_lost_pet_post_layout_1"
         app:layout_constraintTop_toBottomOf="@+id/edit_username_field" />
 
     <EditText
         android:id="@+id/edit_country_field"
         android:layout_width="283dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="@string/edit_country_field"
         android:inputType="textPersonName"
         android:textColor="#BABABA"
         android:textColorHint="#BABABA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_right_lost_pet_post_layout_1"
         app:layout_constraintTop_toBottomOf="@+id/edit_city_field" />
 
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_right_lost_pet_post_layout_1"
         app:layout_constraintTop_toBottomOf="@+id/edit_country_field"
         app:srcCompat="@drawable/icons_phone" />
 
@@ -152,10 +156,8 @@
         android:id="@+id/imageView8"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="52dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_right_lost_pet_post_layout_1"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
         app:srcCompat="@drawable/icon_mail_24" />
 
@@ -171,6 +173,7 @@
         android:inputType="phone"
         android:textColor="#BABABA"
         android:textColorHint="#BABABA"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toEndOf="@+id/imageView7"
         app:layout_constraintTop_toBottomOf="@+id/edit_country_field" />
 
@@ -186,6 +189,7 @@
         android:inputType="textPersonName"
         android:textColor="#BABABA"
         android:textColorHint="#BABABA"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
         app:layout_constraintTop_toBottomOf="@+id/edit_cellphone_number_field" />
 
