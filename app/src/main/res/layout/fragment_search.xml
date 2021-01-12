@@ -10,11 +10,12 @@
     tools:openDrawer="start">
 
     <TextView
-        android:id="@+id/txtSearch"
+        android:id="@+id/col"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SEARCH"
+        android:text="In Progress"
         android:textSize="36sp"
+        android:textColor="@color/WhiteSmoke"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -22,18 +23,15 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="329dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:background="@drawable/button_sign_up"
+        android:background="@drawable/button_white_radius_stroke"
         android:ems="10"
         android:hint="Buscar"
         android:inputType="textPersonName"
         android:paddingLeft="16dp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="parent" />
@@ -42,16 +40,17 @@
         android:id="@+id/imageView"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/ic_search"
         app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName"
+        app:srcCompat="@drawable/ic_search" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.15085158" />
+        app:layout_constraintGuide_percent="0.18" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
