@@ -97,7 +97,7 @@ class RegisterActivity : AppCompatActivity() {
         val userMap = HashMap<String, Any>()
         userMap["uid"] = currentUserID
         userMap["email"] = new_Email
-        userMap["user"] = new_UserName
+        userMap["user"] = new_UserName.toLowerCase()
         userMap["image"] = "https://firebasestorage.googleapis.com/v0/b/foundmypet-b1dae.appspot.com/o/Default%20Images%2Fprofile.png?alt=media&token=d65da2f2-1287-4d42-9b12-eeeb2646289a"
 
         userRef.child(currentUserID).setValue(userMap)
