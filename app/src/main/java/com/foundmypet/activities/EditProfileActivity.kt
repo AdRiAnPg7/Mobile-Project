@@ -156,6 +156,11 @@ class EditProfileActivity : AppCompatActivity() {
                             val ref = FirebaseDatabase.getInstance().reference.child("Users")
                             val userMap = hashMapOf<String, Any>()
                             userMap["image"] = myUri
+                            userMap["user"] = edit_username_field.text.toString()
+                            userMap["city"] = edit_city_field.text.toString()
+                            userMap["country"] = edit_country_field.text.toString()
+                            userMap["cellphone"] = edit_cellphone_number_field.text.toString()
+                            userMap["email"] = edit_email_field.text.toString()
                             ref.child(firebaseUser.uid).updateChildren(userMap)
 
                             Toast.makeText(
