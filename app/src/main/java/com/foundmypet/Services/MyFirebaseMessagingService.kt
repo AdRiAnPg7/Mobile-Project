@@ -1,12 +1,11 @@
-package com.foundmypet
+package com.foundmypet.Services
 
-import android.app.Notification
 import android.app.NotificationManager
 import android.content.Context
 import android.media.RingtoneManager
 import android.util.Log
 import androidx.core.app.NotificationCompat
-import com.google.firebase.messaging.FirebaseMessaging
+import com.foundmypet.R
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 

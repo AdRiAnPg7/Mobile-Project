@@ -24,7 +24,7 @@
     <string name="create_lostPet_post_species_label">Species:</string>
     <string name="create_lostPet_post_color_label">Color:</string>
     <string name="create_lostPet_post_lost_date_label">Date of lost:</string>
-    <string name="create_lostPet_post_last_seen_label">Date of lost:</string>   
+    <string name="create_lostPet_post_last_seen_label">Date of lost:</string>
     <string name="create_lostPet_post_contact_phone_label">Contact number(s):</string>
     <string name="recuerdame">Remember me</string>
     <string name="no_tienes_cuenta">Don\'t have an account?</string>
